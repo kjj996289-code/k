@@ -1,29 +1,44 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Core Java & Web Technology Practical Slips</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Core Java &amp; Web Technology Practical Slips</title>
 <style>
-body{font-family:Arial,sans-serif;line-height:1.5;margin:0;background:#f4f6f8;color:#222}
-header{background:#17365d;color:white;padding:22px;text-align:center}
-main{max-width:1000px;margin:20px auto;padding:0 14px}
-.slip{background:white;margin:18px 0;padding:18px;border-radius:8px;box-shadow:0 2px 6px #ddd}
-h2{color:#17365d;margin-top:0} h3{margin-bottom:6px;color:#333}
-pre{position:relative;background:#f1f3f5;padding:48px 14px 14px;overflow-x:auto;border-left:4px solid #4775a8;border-radius:4px;white-space:pre;line-height:1.65}
-code{font-family:Consolas,'Courier New',monospace;font-size:14px;tab-size:2}
-.copy-btn{position:absolute;top:8px;right:8px;padding:6px 12px;background:#17365d;color:white;border:0;border-radius:4px;cursor:pointer;font-size:12px}
-.copy-btn:hover{background:#285b91}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:205px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#17202a;line-height:1.5}
+header{position:sticky;top:0;z-index:10;background:#111827;color:#fff;padding:18px 24px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+header h1{margin:0 0 8px;font-size:24px}
+header p{margin:0;color:#cbd5e1}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.toolbar input{flex:1;min-width:240px;padding:10px 12px;border:1px solid #475569;border-radius:8px;background:#1f2937;color:#fff;font-size:14px}
+.toolbar input::placeholder{color:#cbd5e1}
+.slip-nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.slip-nav a{color:#e5e7eb;text-decoration:none;padding:6px 10px;border-radius:6px;background:#374151;font-size:13px;min-width:32px;text-align:center}
+.slip-nav a:hover,.slip-nav a:focus{background:#2563eb;color:white}
+main{max-width:1250px;margin:24px auto;padding:0 16px}
+.slip{background:#fff;border-radius:12px;margin:0 0 24px;padding:0;box-shadow:0 3px 14px rgba(0,0,0,.08);overflow:hidden}
+.slip h2{font-size:22px;font-weight:700;margin:0;padding:16px 20px;background:#e5e7eb;border-bottom:1px solid #d1d5db;color:#17202a}
+.slip h3{margin:0;padding:16px 20px 8px;font-size:17px;color:#17202a}
+.slip pre{position:relative;margin:0 20px 18px;background:#0b1220;color:#e5e7eb;border-radius:9px;padding:16px;overflow:auto;line-height:1.5;font-size:13px;white-space:pre}
+.slip code{font-family:'Cascadia Code','Consolas','Courier New',monospace;font-size:13px;tab-size:2;color:#e5e7eb}
+.copy-btn{position:sticky;float:right;top:0;z-index:2;margin-top:-8px;margin-right:-8px;margin-bottom:4px;border:0;border-radius:7px;padding:8px 12px;background:#2563eb;color:white;cursor:pointer;font-weight:600;font-size:12px}
+.copy-btn:hover{background:#1d4ed8}
 .copy-btn:focus{outline:2px solid #f0b429;outline-offset:2px}
-.note{background:#fff4d6;padding:10px;border-radius:5px}
-@media print{body{background:white}.slip{box-shadow:none;break-inside:avoid}}
+.note{background:#fff7ed;border-left:4px solid #f97316;padding:12px 14px;border-radius:7px;margin:20px 0;color:#7c2d12}
+footer{text-align:center;padding:20px;color:#64748b}
+.hidden{display:none!important}
+@media(max-width:700px){header{padding:15px}header h1{font-size:21px}main{padding:0 10px}.slip h2{padding:14px 15px}.slip h3{padding:13px 15px 8px}.slip pre{margin:0 12px 14px;padding:12px;font-size:12px}.slip code{font-size:12px}.toolbar input{min-width:100%}}
+@media print{header{position:static;background:#fff;color:#000;box-shadow:none}.toolbar,.slip-nav,.copy-btn{display:none!important}body{background:#fff}.slip{box-shadow:none;break-inside:avoid}.slip pre{background:#fff;color:#000;border:1px solid #ccc}.slip code{color:#000}}
 </style>
 </head>
 <body>
-<header><h1>Core Java & Web Technology-I</h1><p>Selected Practical Slips: 1–16, 18, 20, 21</p><p>Simple exam-ready programs — Q1 Java, Q2 Web Technology</p></header>
+<header><h1>Core Java &amp; Web Technology-I</h1><p>Selected Practical Slips: 1–16, 18, 20, 21</p><p>Q1 Java / JavaFX / Swing • Q2 Web Technology</p><div class="toolbar"><input id="search" placeholder="Search slip or practical..." type="search"/></div><nav aria-label="Slip navigation" class="slip-nav"><a href="#slip-1">1</a><a href="#slip-2">2</a><a href="#slip-3">3</a><a href="#slip-4">4</a><a href="#slip-5">5</a><a href="#slip-6">6</a><a href="#slip-7">7</a><a href="#slip-8">8</a><a href="#slip-9">9</a><a href="#slip-10">10</a><a href="#slip-11">11</a><a href="#slip-12">12</a><a href="#slip-13">13</a><a href="#slip-14">14</a><a href="#slip-15">15</a><a href="#slip-16">16</a><a href="#slip-18">18</a><a href="#slip-20">20</a><a href="#slip-21">21</a></nav></header>
 <main>
-
-<section class="slip"><h2>Slip 1</h2><h3>Q1 — Java: Sum of array elements and sort ascending</h3><pre><code>import java.util.*;
+<section class="slip" id="slip-1"><h2>Slip 1</h2><h3>Q1 — Java: Sum of array elements and sort ascending</h3><pre><code>import java.util.*;
 class Slip1Q1 {
  public static void main(String[] args) {
   Scanner sc = new Scanner(System.in);
@@ -98,8 +113,7 @@ Reset&lt;/button&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 2</h2><h3>Q1 — Java: Armstrong numbers in a range</h3><pre><code>import java.util.*;
+<section class="slip" id="slip-2"><h2>Slip 2</h2><h3>Q1 — Java: Armstrong numbers in a range</h3><pre><code>import java.util.*;
 class Slip2Q1 {
  static boolean armstrong(int n) {
   int x=n, digits=String.valueOf(n).length(), sum=0;
@@ -184,8 +198,7 @@ Register&lt;/button&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 3</h2><h3>Q1 — Java: Package for string concatenate and compare</h3><pre><code>// Save as StringDemo.java (simple single-file version)
+<section class="slip" id="slip-3"><h2>Slip 3</h2><h3>Q1 — Java: Package for string concatenate and compare</h3><pre><code>// Save as StringDemo.java (simple single-file version)
 class Con {
  void join(String a,String b){System.out.println("Concatenation: "+a+b);}
 }
@@ -241,8 +254,7 @@ Admissions open&lt;/aside&gt;
 ABC College&lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 4</h2><h3>Q1 — Java: Menu-driven matrix operations</h3><pre><code>import java.util.*;
+<section class="slip" id="slip-4"><h2>Slip 4</h2><h3>Q1 — Java: Menu-driven matrix operations</h3><pre><code>import java.util.*;
 class Slip4Q1 {
  static void print(int[][] a){for(int[] r:a){for(int x:r)System.out.print(x+" ");System.out.println();}}
  public static void main(String[] args){
@@ -277,8 +289,7 @@ Click Me&lt;/button&gt;
 function changeText(){document.getElementById("heading").textContent="Text Changed Successfully!";}&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 5</h2><h3>Q1 — Java: Reverse file contents and change case</h3><pre><code>import java.nio.file.*;
+<section class="slip" id="slip-5"><h2>Slip 5</h2><h3>Q1 — Java: Reverse file contents and change case</h3><pre><code>import java.nio.file.*;
 import java.util.*;
 class Slip5Q1 {
  public static void main(String[] args) throws Exception {
@@ -306,8 +317,7 @@ My Image Gallery&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 6</h2><h3>Q1 — Java: Account, SavingAccount and AccountDetail inheritance</h3><pre><code>class Account {
+<section class="slip" id="slip-6"><h2>Slip 6</h2><h3>Q1 — Java: Account, SavingAccount and AccountDetail inheritance</h3><pre><code>class Account {
  String custname; int accno;
  Account(){custname="Unknown";accno=0;}
  Account(String n,int a){custname=n;accno=a;}
@@ -339,8 +349,7 @@ Hover Button&lt;/button&gt;
 Hover Link&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 7</h2><h3>Q1 — Java: Driver with user-defined exception</h3><pre><code>class AgeException extends Exception { AgeException(String m){super(m);} }
+<section class="slip" id="slip-7"><h2>Slip 7</h2><h3>Q1 — Java: Driver with user-defined exception</h3><pre><code>class AgeException extends Exception { AgeException(String m){super(m);} }
 class Driver {
  int license_no,age; String name,address;
  Driver(int l,String n,String a,int age)throws AgeException{
@@ -375,8 +384,7 @@ JavaScript&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 8</h2><h3>Q1 — Java: Abstract Shape and method overriding</h3><pre><code>abstract class Shape { abstract void printArea(); }
+<section class="slip" id="slip-8"><h2>Slip 8</h2><h3>Q1 — Java: Abstract Shape and method overriding</h3><pre><code>abstract class Shape { abstract void printArea(); }
 class Rectangle extends Shape { int l=10,b=5; void printArea(){System.out.println("Rectangle area = "+(l*b));} }
 class Triangle extends Shape { int b=10,h=6; void printArea(){System.out.println("Triangle area = "+(0.5*b*h));} }
 class Circle extends Shape { double r=7; void printArea(){System.out.println("Circle area = "+(Math.PI*r*r));} }
@@ -394,8 +402,7 @@ Image Change&lt;/h2&gt;
 Change Image&lt;/button&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-
-<section class="slip"><h2>Slip 9</h2><h3>Q1 — Java: Employee with maximum salary (array of objects)</h3><pre><code>import java.util.*;
+<section class="slip" id="slip-9"><h2>Slip 9</h2><h3>Q1 — Java: Employee with maximum salary (array of objects)</h3><pre><code>import java.util.*;
 class Employee {
  int id; String name; double salary;
  Employee(int i,String n,double s){id=i;name=n;salary=s;}
@@ -417,8 +424,7 @@ console.log("Addition:",add(a,b));
 console.log("Subtraction:",sub(a,b));
 console.log("Multiplication:",mul(a,b));
 console.log("Division:",div(a,b));</code></pre></section>
-
-<section class="slip"><h2>Slip 10</h2><h3>Q1 — Java: Read abc.txt and display uppercase</h3><pre><code>import java.nio.file.*;
+<section class="slip" id="slip-10"><h2>Slip 10</h2><h3>Q1 — Java: Read abc.txt and display uppercase</h3><pre><code>import java.nio.file.*;
 class Slip10Q1 {
  public static void main(String[] args)throws Exception{
   String text=Files.readString(Path.of("abc.txt"));
@@ -438,16 +444,14 @@ English: ${english}
 Total: ${total}
 Percentage: ${percentage.toFixed(2)}%
 `);</code></pre></section>
-
-<section class="slip"><h2>Slip 11</h2><h3>Q1 — Java: Vehicle and derived vehicle classes</h3><pre><code>import java.util.*;
+<section class="slip" id="slip-11"><h2>Slip 11</h2><h3>Q1 — Java: Vehicle and derived vehicle classes</h3><pre><code>import java.util.*;
 class Vehicle { String company; double price; Vehicle(String c,double p){company=c;price=p;} }
 class LightMotorVehicle extends Vehicle { double mileage; LightMotorVehicle(String c,double p,double m){super(c,p);mileage=m;} void show(){System.out.println(company+" "+price+" Mileage:"+mileage);} }
 class HeavyMotorVehicle extends Vehicle { double capacity; HeavyMotorVehicle(String c,double p,double t){super(c,p);capacity=t;} void show(){System.out.println(company+" "+price+" Capacity:"+capacity+" tons");} }
 class Slip11Q1 { public static void main(String[] args){new LightMotorVehicle("Tata",600000,18).show();new HeavyMotorVehicle("Volvo",2500000,12).show();} }</code></pre><h3>Q2 — JavaScript: Total and average of three subjects</h3><pre><code>const calculate=(a,b,c)=&gt;({total:a+b+c,average:(a+b+c)/3});
 let result=calculate(85,90,78);
 console.log(`Total: ${result.total}\nAverage: ${result.average.toFixed(2)}`);</code></pre></section>
-
-<section class="slip"><h2>Slip 12</h2><h3>Q1 — Java: Package game with Indoor and Outdoor</h3><pre><code>// Simple version using two classes in one file
+<section class="slip" id="slip-12"><h2>Slip 12</h2><h3>Q1 — Java: Package game with Indoor and Outdoor</h3><pre><code>// Simple version using two classes in one file
 class Indoor {
  String game; int players;
  Indoor(){this("Chess",2);}
@@ -467,8 +471,7 @@ Product: ${product}
 Price: Rs.${price}
 Quantity: ${quantity}
 Total: Rs.${totalPrice(price,quantity)}`);</code></pre></section>
-
-<section class="slip"><h2>Slip 13</h2><h3>Q1 — Java: Clock validation and AM/PM</h3><pre><code>import java.util.*;
+<section class="slip" id="slip-13"><h2>Slip 13</h2><h3>Q1 — Java: Clock validation and AM/PM</h3><pre><code>import java.util.*;
 class Clock {
  int h,m,s;
  Clock(int h,int m,int s){this.h=h;this.m=m;this.s=s;}
@@ -482,8 +485,7 @@ class Clock {
 console.log(`Before: a=${a}, b=${b}`);
 [a,b]=[b,a];
 console.log(`After: a=${a}, b=${b}`);</code></pre></section>
-
-<section class="slip"><h2>Slip 14</h2><h3>Q1 — JavaFX: Prime number check</h3><pre><code>// Save as PrimeApp.java; requires JavaFX configured.
+<section class="slip" id="slip-14"><h2>Slip 14</h2><h3>Q1 — JavaFX: Prime number check</h3><pre><code>// Save as PrimeApp.java; requires JavaFX configured.
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -503,8 +505,7 @@ console.log(`Employee Details
 Name: ${name}
 Department: ${department}
 Salary: Rs.${salary}`);</code></pre></section>
-
-<section class="slip"><h2>Slip 15</h2><h3>Q1 — JavaFX: Simple calculator</h3><pre><code>// Save as CalculatorApp.java; requires JavaFX configured.
+<section class="slip" id="slip-15"><h2>Slip 15</h2><h3>Q1 — JavaFX: Simple calculator</h3><pre><code>// Save as CalculatorApp.java; requires JavaFX configured.
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -517,15 +518,14 @@ public class CalculatorApp extends Application {
   VBox root=new VBox(8,new Label("First number"),a,new Label("Second number"),b,new HBox(8,add,sub,mul,div),out);root.setStyle("-fx-padding:20");
   stage.setScene(new Scene(root,300,260));stage.setTitle("Calculator");stage.show();
  }
- void calc(TextField a,TextField b,Label out,char op){try{double x=Double.parseDouble(a.getText()),y=Double.parseDouble(b.getText());if(op=='/'&&y==0){out.setText("Cannot divide by zero");return;}double z=op=='+'?x+y:op=='-'?x-y:op=='*'?x*y:x/y;out.setText("Result: "+z);}catch(Exception e){out.setText("Enter valid numbers");}}
+ void calc(TextField a,TextField b,Label out,char op){try{double x=Double.parseDouble(a.getText()),y=Double.parseDouble(b.getText());if(op=='/'&amp;&amp;y==0){out.setText("Cannot divide by zero");return;}double z=op=='+'?x+y:op=='-'?x-y:op=='*'?x*y:x/y;out.setText("Result: "+z);}catch(Exception e){out.setText("Enter valid numbers");}}
  public static void main(String[] args){launch(args);}
 }</code></pre><h3>Q2 — JavaScript: Copy array using spread operator</h3><pre><code>let original=["Apple","Banana","Mango"];
 let copy=[...original];
 copy.push("Orange");
 console.log("Original:",original);
 console.log("Copy:",copy);</code></pre></section>
-
-<section class="slip"><h2>Slip 16</h2><h3>Q1 — JavaFX: Shopping cart (simple)</h3><pre><code>// Save as CartApp.java; requires JavaFX configured.
+<section class="slip" id="slip-16"><h2>Slip 16</h2><h3>Q1 — JavaFX: Shopping cart (simple)</h3><pre><code>// Save as CartApp.java; requires JavaFX configured.
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -543,8 +543,7 @@ public class CartApp extends Application {
  public static void main(String[] args){launch(args);}
 }</code></pre><h3>Q2 — JavaScript: Sum using rest parameter</h3><pre><code>function sum(...numbers){return numbers.reduce((total,n)=&gt;total+n,0);}
 console.log("Sum:",sum(10,20,30,40));</code></pre></section>
-
-<section class="slip"><h2>Slip 18</h2><h3>Q1 — JavaFX: Buttons to change background color</h3><pre><code>// Save as ColorApp.java; requires JavaFX configured.
+<section class="slip" id="slip-18"><h2>Slip 18</h2><h3>Q1 — JavaFX: Buttons to change background color</h3><pre><code>// Save as ColorApp.java; requires JavaFX configured.
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -566,8 +565,7 @@ Hello from Node.js server!&lt;/h1&gt;
 ');
 });
 server.listen(3000,()=&gt;console.log('Open http://localhost:3000'));</code></pre></section>
-
-<section class="slip"><h2>Slip 20</h2><h3>Q1 — Java: Mouse move and click positions (Swing)</h3><pre><code>import javax.swing.*;
+<section class="slip" id="slip-20"><h2>Slip 20</h2><h3>Q1 — Java: Mouse move and click positions (Swing)</h3><pre><code>import javax.swing.*;
 import java.awt.event.*;
 class Slip20Q1 extends JFrame {
  JTextField field=new JTextField(20);
@@ -586,8 +584,7 @@ class Slip20Q1 extends JFrame {
 }
 divide(20,4).then(result=&gt;console.log("Result:",result))
  .catch(error=&gt;console.log("Error:",error));</code></pre></section>
-
-<section class="slip"><h2>Slip 21</h2><h3>Q1 — Java: College and Department inheritance</h3><pre><code>class College {
+<section class="slip" id="slip-21"><h2>Slip 21</h2><h3>Q1 — Java: College and Department inheritance</h3><pre><code>class College {
  int cno;String cname,caddr;
  College(int no,String name,String addr){cno=no;cname=name;caddr=addr;}
 }
@@ -603,10 +600,16 @@ console.log('Resolve:',path.resolve('notes.txt'));
 console.log('Directory:',path.dirname(file));
 console.log('File name:',path.basename(file));
 console.log('Extension:',path.extname(file));</code></pre></section>
-
 <footer style="text-align:center;padding:20px;color:#555">End of selected slips</footer>
 </main>
 <script>
+document.getElementById('search').addEventListener('input', function () {
+  const query = this.value.trim().toLowerCase();
+  document.querySelectorAll('main > .slip').forEach(function (slip) {
+    slip.classList.toggle('hidden', query !== '' && !slip.innerText.toLowerCase().includes(query));
+  });
+});
+</script><script>
 document.querySelectorAll('pre').forEach(function(block) {
   const button = document.createElement('button');
   button.className = 'copy-btn';
