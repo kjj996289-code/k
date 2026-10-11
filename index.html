@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Core Java &amp; Web Technology Practical Slips</title>
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:205px}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#17202a;line-height:1.5}
-header{position:sticky;top:0;z-index:10;background:#111827;color:#fff;padding:18px 24px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
-header h1{margin:0 0 8px;font-size:24px}
-header p{margin:0;color:#cbd5e1}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.toolbar input{flex:1;min-width:240px;padding:10px 12px;border:1px solid #475569;border-radius:8px;background:#1f2937;color:#fff;font-size:14px}
-.toolbar input::placeholder{color:#cbd5e1}
-.slip-nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
-.slip-nav a{color:#e5e7eb;text-decoration:none;padding:6px 10px;border-radius:6px;background:#374151;font-size:13px;min-width:32px;text-align:center}
-.slip-nav a:hover,.slip-nav a:focus{background:#2563eb;color:white}
-main{max-width:1250px;margin:24px auto;padding:0 16px}
-.slip{background:#fff;border-radius:12px;margin:0 0 24px;padding:0;box-shadow:0 3px 14px rgba(0,0,0,.08);overflow:hidden}
-.slip h2{font-size:22px;font-weight:700;margin:0;padding:16px 20px;background:#e5e7eb;border-bottom:1px solid #d1d5db;color:#17202a}
-.slip h3{margin:0;padding:16px 20px 8px;font-size:17px;color:#17202a}
-.slip pre{position:relative;margin:0 20px 18px;background:#0b1220;color:#e5e7eb;border-radius:9px;padding:16px;overflow:auto;line-height:1.5;font-size:13px;white-space:pre}
-.slip pre code{display:block;white-space:pre;word-break:normal;overflow-wrap:normal;font-family:'Cascadia Code','Consolas','Courier New',monospace;font-size:13px;tab-size:2;color:#e5e7eb}
-.copy-btn{position:sticky;float:right;top:0;z-index:2;margin-top:-8px;margin-right:-8px;margin-bottom:4px;border:0;border-radius:7px;padding:8px 12px;background:#2563eb;color:white;cursor:pointer;font-weight:600;font-size:12px}
-.copy-btn:hover{background:#1d4ed8}
+body{font-family:Arial,sans-serif;line-height:1.5;margin:0;background:#000;color:#f5f5f5}
+header{background:#111;color:white;padding:22px;text-align:center;border-bottom:1px solid #333}
+main{max-width:1000px;margin:20px auto;padding:0 14px}
+.slip{background:#080808;color:#f5f5f5;margin:18px 0;padding:18px;border:1px solid #333;border-radius:8px;box-shadow:0 2px 6px #222}
+h2{color:#fff;margin-top:0} h3{margin-bottom:6px;color:#eee}
+pre{position:relative;background:#000 !important;color:#fff !important;padding:48px 14px 14px;overflow-x:auto;border:1px solid #444;border-left:4px solid #777;border-radius:4px;white-space:pre;line-height:1.65}
+code{font-family:Consolas,'Courier New',monospace;font-size:14px;tab-size:2;color:#fff !important}
+.copy-btn{position:absolute;top:8px;right:8px;padding:6px 12px;background:#17365d;color:white;border:0;border-radius:4px;cursor:pointer;font-size:12px}
+.copy-btn:hover{background:#285b91}
 .copy-btn:focus{outline:2px solid #f0b429;outline-offset:2px}
-.note{background:#fff7ed;border-left:4px solid #f97316;padding:12px 14px;border-radius:7px;margin:20px 0;color:#7c2d12}
-footer{text-align:center;padding:20px;color:#64748b}
-.hidden{display:none!important}
-@media(max-width:700px){header{padding:15px}header h1{font-size:21px}main{padding:0 10px}.slip h2{padding:14px 15px}.slip h3{padding:13px 15px 8px}.slip pre{margin:0 12px 14px;padding:12px;font-size:12px}.slip pre code{font-size:12px}.toolbar input{min-width:100%}}
-@media print{header{position:static;background:#fff;color:#000;box-shadow:none}.toolbar,.slip-nav,.copy-btn{display:none!important}body{background:#fff}.slip{box-shadow:none;break-inside:avoid}.slip pre{background:#fff;color:#000;border:1px solid #ccc}.slip pre code{color:#000}}
+.note{background:#111;color:#fff;border:1px solid #333;padding:10px;border-radius:5px}
+@media print{body{background:white;color:#000}.slip{box-shadow:none;break-inside:avoid;background:white;color:#000}pre{background:#000!important;color:#fff!important}}
 
-pre { background:#111 !important; color:#fff !important; border-left:4px solid #555 !important; }
-pre code { color:#fff !important; }
-.copy-btn { background:#198754 !important; color:#fff !important; }
-.copy-btn:hover { background:#146c43 !important; }
+.slip-nav{position:sticky;top:0;z-index:100;background:#111;color:#fff;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;border-bottom:1px solid #444;box-shadow:0 3px 8px #000}
+.slip-nav strong{margin-right:5px;color:#fff}
+.slip-nav a{display:inline-block;min-width:30px;text-align:center;padding:6px 9px;background:#222;color:#fff;text-decoration:none;border:1px solid #666;border-radius:5px;font-weight:bold}
+.slip-nav a:hover,.slip-nav a:focus{background:#fff;color:#000;border-color:#fff}
+.slip{scroll-margin-top:90px}
 </style>
 </head>
 <body>
-<header><h1>Core Java &amp; Web Technology-I</h1><p>Selected Practical Slips: 1–16, 18, 19, 21</p><p>Q1 Java / JavaFX / Swing • Q2 Web Technology</p><div class="toolbar"><input id="search" placeholder="Search slip or practical..." type="search"/></div><nav aria-label="Slip navigation" class="slip-nav"><a href="#slip-1">1</a><a href="#slip-2">2</a><a href="#slip-3">3</a><a href="#slip-4">4</a><a href="#slip-5">5</a><a href="#slip-6">6</a><a href="#slip-7">7</a><a href="#slip-8">8</a><a href="#slip-9">9</a><a href="#slip-10">10</a><a href="#slip-11">11</a><a href="#slip-12">12</a><a href="#slip-13">13</a><a href="#slip-14">14</a><a href="#slip-15">15</a><a href="#slip-16">16</a><a href="#slip-18">18</a><a href="#slip-20">20</a><a href="#slip-21">21</a></nav></header>
+<header><h1>Core Java &amp; Web Technology-I</h1><p>Selected Practical Slips: 1–16, 18, 20, 21</p><p>Simple exam-ready programs — Q1 Java, Q2 Web Technology</p></header>
+<nav class="slip-nav" aria-label="Jump to a practical slip">
+  <strong>Go to Slip:</strong>
+  <a href="#slip-1">1</a>
+  <a href="#slip-2">2</a>
+  <a href="#slip-3">3</a>
+  <a href="#slip-4">4</a>
+  <a href="#slip-5">5</a>
+  <a href="#slip-6">6</a>
+  <a href="#slip-7">7</a>
+  <a href="#slip-8">8</a>
+  <a href="#slip-9">9</a>
+  <a href="#slip-10">10</a>
+  <a href="#slip-11">11</a>
+  <a href="#slip-12">12</a>
+  <a href="#slip-13">13</a>
+  <a href="#slip-14">14</a>
+  <a href="#slip-15">15</a>
+  <a href="#slip-16">16</a>
+  <a href="#slip-18">18</a>
+  <a href="#slip-20">20</a>
+  <a href="#slip-21">21</a>
+</nav>
 <main>
-<section class="slip" id="slip-1"><h2>Slip 1</h2><h3>Q1 — Java: Sum of array elements and sort ascending</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.*;
-class Main {
- public static void main(String[] args) {
-  Scanner sc = new Scanner(System.in);
-  System.out.print("Enter number of elements: ");
-  int n = sc.nextInt(), a[] = new int[n], sum = 0;
-  for (int i=0;i&lt;n;i++) { a[i]=sc.nextInt(); sum+=a[i]; }
-  Arrays.sort(a);
-  System.out.println("Sum = " + sum);
-  System.out.println("Ascending order: " + Arrays.toString(a));
- }
+<p class="note">Save this file as <b>practicals.html</b> and open it in a browser. Java programs should be copied into a separate <code>.java</code> file; JavaScript programs should be saved as <code>.js</code> and run with <code>node filename.js</code>. HTML questions are included as complete HTML files inside each code block.</p>
+<section class="slip" id="slip-1"><h2>Slip 1</h2><h3>Q1 — Java: Sum of array elements and sort ascending</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+public class ArraySortSum { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter number of elements: "); 
+        int n = sc.nextInt(); 
+        int[] a = new int[n]; 
+        int sum = 0; 
+        System.out.println("Enter array elements:"); 
+        for (int i = 0; i &lt; n; i++) { 
+            a[i] = sc.nextInt(); 
+            sum = sum + a[i]; 
+        } 
+        for (int i = 0; i &lt; n - 1; i++) { 
+            for (int j = 0; j &lt; n - i - 1; j++) { 
+                if (a[j] &gt; a[j + 1]) { 
+                    int temp = a[j]; 
+                    a[j] = a[j + 1]; 
+                    a[j + 1] = temp; 
+                } 
+
+            } 
+        } 
+ 
+        System.out.println("Sum of array elements = " + sum); 
+        System.out.println("Array elements in ascending order:"); 
+        for (int i = 0; i &lt; n; i++) { 
+            System.out.print(a[i] + " "); 
+        } 
+    } 
 }</code></pre><h3>Q2 — HTML: College registration form with validation</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -122,19 +147,36 @@ Reset&lt;/button&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-2"><h2>Slip 2</h2><h3>Q1 — Java: Armstrong numbers in a range</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.*;
-class Main {
- static boolean armstrong(int n) {
-  int x=n, digits=String.valueOf(n).length(), sum=0;
-  while(x&gt;0){int d=x%10; sum+=Math.pow(d,digits); x/=10;}
-  return sum==n;
- }
- public static void main(String[] args) {
-  Scanner sc=new Scanner(System.in);
-  System.out.print("Enter start and end: ");
-  int a=sc.nextInt(), b=sc.nextInt();
-  for(int i=a;i&lt;=b;i++) if(armstrong(i)) System.out.print(i+" ");
- }
+<section class="slip" id="slip-2"><h2>Slip 2</h2><h3>Q1 — Java: Armstrong numbers in a range</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+public class ArmstrongRange { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter starting range: "); 
+        int start = sc.nextInt(); 
+        System.out.print("Enter ending range: "); 
+        int end = sc.nextInt(); 
+        System.out.println("Armstrong numbers between " + start + " and " + end + 
+":"); 
+
+        for (int num = start; num &lt;= end; num++) { 
+            int temp = num; 
+            int sum = 0; 
+            int digits = 0; 
+            while (temp != 0) { 
+                digits++; 
+                temp = temp / 10; 
+            } 
+            temp = num; 
+            while (temp != 0) { 
+                int digit = temp % 10; 
+                sum = sum + (int) Math.pow(digit, digits); 
+                temp = temp / 10; 
+            } 
+            if (sum == num) { 
+                System.out.print(num + " "); 
+            } 
+        } 
+    } 
 }</code></pre><h3>Q2 — HTML: Student registration form</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -207,22 +249,51 @@ Register&lt;/button&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-3"><h2>Slip 3</h2><h3>Q1 — Java: Package for string concatenate and compare</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>// Save as StringDemo.java (simple single-file version)
-class Con {
- void join(String a,String b){System.out.println("Concatenation: "+a+b);}
-}
-class Comp {
- void compare(String a,String b){
-  if(a.equals(b)) System.out.println("Strings are equal");
-  else System.out.println("Strings are not equal");
- }
-}
-public class Main {
- public static void main(String[] args){
-  String a="Hello", b="Java";
-  new Con().join(a,b); new Comp().compare(a,b);
- }
-}</code></pre><h3>Q2 — HTML: Responsive college homepage using Flexbox</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
+<section class="slip" id="slip-3"><h2>Slip 3</h2><h3>Q1 — Java: Package for string concatenate and compare</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>1. Create Package: StringOperation 
+Step 1: mkdir –p JavaProject/StringOperation 
+Step 2: cd JavaProject 
+Step 3: vim StringOperation/Con.java 
+package StringOperation; 
+ 
+public class Con { 
+    public void concatenate(String s1, String s2) { 
+        System.out.println("Concatenated String: " + s1 + s2); 
+    } 
+} 
+ 
+Step 4: vim StringOperation/Comp.java 
+package StringOperation; 
+public class Comp { 
+    public void compare(String s1, String s2) { 
+        if (s1.equals(s2)) 
+            System.out.println("Both strings are equal."); 
+        else 
+            System.out.println("Both strings are not equal."); 
+    } 
+} 
+Step 5: vim StringDemo.java 
+import java.util.Scanner; 
+import StringOperation.Con; 
+
+import StringOperation.Comp; 
+public class StringDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter first string: "); 
+        String s1 = sc.nextLine(); 
+        System.out.print("Enter second string: "); 
+        String s2 = sc.nextLine(); 
+        Con c = new Con(); 
+        Comp cp = new Comp(); 
+        c.concatenate(s1, s2); 
+        cp.compare(s1, s2); 
+    } 
+} 
+Step 6 : javac StringOperation/Con.java StringOperation/Comp.java 
+StringDemo.java 
+OR 
+  javac StringDemo 
+Step 7 : java StringDemo</code></pre><h3>Q2 — HTML: Responsive college homepage using Flexbox</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;
@@ -263,26 +334,134 @@ Admissions open&lt;/aside&gt;
 ABC College&lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-4"><h2>Slip 4</h2><h3>Q1 — Java: Menu-driven matrix operations</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.*;
-class Main {
- static void print(int[][] a){for(int[] r:a){for(int x:r)System.out.print(x+" ");System.out.println();}}
- public static void main(String[] args){
-  Scanner s=new Scanner(System.in); int ch;
-  do{
-   System.out.println("1.Add 2.Multiply 3.Transpose 4.Exit"); ch=s.nextInt();
-   if(ch==4)break;
-   System.out.print("Rows and columns: "); int r=s.nextInt(), c=s.nextInt(); int[][] a=new int[r][c];
-   System.out.println("Enter matrix:"); for(int i=0;i&lt;r;i++)for(int j=0;j&lt;c;j++)a[i][j]=s.nextInt();
-   if(ch==3){for(int j=0;j&lt;c;j++){for(int i=0;i&lt;r;i++)System.out.print(a[i][j]+" ");System.out.println();}}
-   else {
-    System.out.print("Second matrix rows and columns: "); int r2=s.nextInt(),c2=s.nextInt();
-    int[][] b=new int[r2][c2]; for(int i=0;i&lt;r2;i++)for(int j=0;j&lt;c2;j++)b[i][j]=s.nextInt();
-    if(ch==1 &amp;&amp; r==r2 &amp;&amp; c==c2){int[][] z=new int[r][c];for(int i=0;i&lt;r;i++)for(int j=0;j&lt;c;j++)z[i][j]=a[i][j]+b[i][j];print(z);}
-    else if(ch==2 &amp;&amp; c==r2){int[][] z=new int[r][c2];for(int i=0;i&lt;r;i++)for(int j=0;j&lt;c2;j++)for(int k=0;k&lt;c;k++)z[i][j]+=a[i][k]*b[k][j];print(z);}
-    else System.out.println("Invalid matrix sizes");
-   }
-  }while(ch!=4);
- }
+<section class="slip" id="slip-4"><h2>Slip 4</h2><h3>Q1 — Java: Menu-driven matrix operations</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+public class MatrixOperations { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        int choice; 
+        do { 
+            System.out.println("\n--- Matrix Operations ---"); 
+            System.out.println("1. Addition"); 
+            System.out.println("2. Multiplication"); 
+            System.out.println("3. Transpose"); 
+            System.out.println("4. Exit"); 
+            System.out.print("Enter your choice: "); 
+            choice = sc.nextInt(); 
+ 
+            switch (choice) { 
+                case 1: 
+                    System.out.print("Enter rows: "); 
+                    int r1 = sc.nextInt(); 
+                    System.out.print("Enter columns: "); 
+
+                    int c1 = sc.nextInt(); 
+                    int[][] a = new int[r1][c1]; 
+                    int[][] b = new int[r1][c1]; 
+                    int[][] sum = new int[r1][c1]; 
+                    System.out.println("Enter first matrix:"); 
+                    for (int i = 0; i &lt; r1; i++) { 
+                        for (int j = 0; j &lt; c1; j++) { 
+                            a[i][j] = sc.nextInt(); 
+                        } 
+                    } 
+                    System.out.println("Enter second matrix:"); 
+                    for (int i = 0; i &lt; r1; i++) { 
+                        for (int j = 0; j &lt; c1; j++) { 
+                            b[i][j] = sc.nextInt(); 
+                        } 
+                    } 
+ 
+                    for (int i = 0; i &lt; r1; i++) { 
+                        for (int j = 0; j &lt; c1; j++) { 
+                            sum[i][j] = a[i][j] + b[i][j]; 
+                        } 
+                    } 
+                    System.out.println("Addition of matrices:"); 
+
+                    for (int i = 0; i &lt; r1; i++) { 
+                        for (int j = 0; j &lt; c1; j++) { 
+                            System.out.print(sum[i][j] + " "); 
+                        } 
+                        System.out.println(); 
+                    } 
+                    break; 
+                case 2: 
+                    System.out.print("Enter rows of first matrix: "); 
+                    int r2 = sc.nextInt(); 
+                    System.out.print("Enter columns of first matrix: "); 
+                    int c2 = sc.nextInt(); 
+                    System.out.print("Enter rows of second matrix: "); 
+                    int r3 = sc.nextInt(); 
+                    System.out.print("Enter columns of second matrix: "); 
+                    int c3 = sc.nextInt(); 
+                    if (c2 != r3) { 
+                        System.out.println("Matrix multiplication is not possible."); 
+                        break; 
+                    } 
+                    int[][] m1 = new int[r2][c2]; 
+                    int[][] m2 = new int[r3][c3]; 
+                    int[][] product = new int[r2][c3]; 
+
+                    System.out.println("Enter first matrix:"); 
+                    for (int i = 0; i &lt; r2; i++) { 
+                        for (int j = 0; j &lt; c2; j++) { 
+                            m1[i][j] = sc.nextInt(); 
+                        } 
+                    } 
+                    System.out.println("Enter second matrix:"); 
+                    for (int i = 0; i &lt; r3; i++) { 
+                        for (int j = 0; j &lt; c3; j++) { 
+                            m2[i][j] = sc.nextInt(); 
+                        } 
+                    } 
+ 
+                    for (int i = 0; i &lt; r2; i++) { 
+                        for (int j = 0; j &lt; c3; j++) { 
+                            for (int k = 0; k &lt; c2; k++) { 
+                                product[i][j] += m1[i][k] * m2[k][j]; 
+                            } 
+                        } 
+                    } 
+                    System.out.println("Multiplication of matrices:"); 
+                    for (int i = 0; i &lt; r2; i++) { 
+                        for (int j = 0; j &lt; c3; j++) { 
+
+                            System.out.print(product[i][j] + " "); 
+                        } 
+                        System.out.println(); 
+                    } 
+                    break; 
+                case 3: 
+                    System.out.print("Enter rows: "); 
+                    int r4 = sc.nextInt(); 
+                    System.out.print("Enter columns: "); 
+                    int c4 = sc.nextInt(); 
+                    int[][] matrix = new int[r4][c4]; 
+ 
+                    System.out.println("Enter matrix:"); 
+                    for (int i = 0; i &lt; r4; i++) { 
+                        for (int j = 0; j &lt; c4; j++) { 
+                            matrix[i][j] = sc.nextInt(); 
+                        } 
+                    } 
+                    System.out.println("Transpose of matrix:"); 
+                    for (int j = 0; j &lt; c4; j++) { 
+                        for (int i = 0; i &lt; r4; i++) { 
+                            System.out.print(matrix[i][j] + " "); 
+                        } 
+
+                        System.out.println(); 
+                    } 
+                    break; 
+                case 4: 
+                    System.out.println("Program terminated."); 
+                    break; 
+                default: 
+                    System.out.println("Invalid choice. Please try again."); 
+            } 
+        } while (choice != 4); 
+        sc.close(); 
+    } 
 }</code></pre><h3>Q2 — HTML/JavaScript: Change heading on button click</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -298,15 +477,40 @@ Click Me&lt;/button&gt;
 function changeText(){document.getElementById("heading").textContent="Text Changed Successfully!";}&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-5"><h2>Slip 5</h2><h3>Q1 — Java: Reverse file contents and change case</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.nio.file.*;
-import java.util.*;
-class Main {
- public static void main(String[] args) throws Exception {
-  Scanner sc=new Scanner(System.in); System.out.print("Enter file name: ");
-  String text=Files.readString(Path.of(sc.nextLine()));
-  String changed=text.toUpperCase();
-  System.out.println(new StringBuilder(changed).reverse());
- }
+<section class="slip" id="slip-5"><h2>Slip 5</h2><h3>Q1 — Java: Reverse file contents and change case</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.io.*; 
+
+import java.util.Scanner; 
+public class FileReverseCase { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter file name: "); 
+        String fileName = sc.nextLine(); 
+        try { 
+            File file = new File(fileName); 
+            Scanner fs = new Scanner(file); 
+            String content = ""; 
+            while (fs.hasNextLine()) { 
+                content = content + fs.nextLine() + "\n"; 
+            } 
+ 
+            fs.close(); 
+            String reverse = ""; 
+            for (int i = content.length() - 1; i &gt;= 0; i--) { 
+                char ch = content.charAt(i); 
+                if (Character.isUpperCase(ch)) 
+                    reverse = reverse + Character.toLowerCase(ch); 
+                else if (Character.isLowerCase(ch)) 
+                    reverse = reverse + Character.toUpperCase(ch); 
+                else 
+
+                    reverse = reverse + ch; 
+            } 
+            System.out.println("\nFile contents in reverse order with changed case:"); 
+            System.out.println(reverse); 
+        } catch (FileNotFoundException e) { 
+            System.out.println("File not found."); 
+        } 
+    } 
 }</code></pre><h3>Q2 — HTML: Responsive image gallery with hover</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -326,20 +530,77 @@ My Image Gallery&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-6"><h2>Slip 6</h2><h3>Q1 — Java: Account, SavingAccount and AccountDetail inheritance</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>class Main {
- String custname; int accno;
- Account(){custname="Unknown";accno=0;}
- Account(String n,int a){custname=n;accno=a;}
-}
-class SavingAccount extends Account {
- double savingbal,minbal;
- SavingAccount(String n,int a,double b,double m){super(n,a);savingbal=b;minbal=m;}
-}
-class AccountDetail extends SavingAccount {
- double depositamt,withdrawalamt;
- AccountDetail(String n,int a,double b,double m,double d,double w){super(n,a,b,m);depositamt=d;withdrawalamt=w;}
- void display(){System.out.println(custname+" "+accno+" Balance:"+savingbal+" Min:"+minbal+" Deposit:"+depositamt+" Withdrawal:"+withdrawalamt);}
- public static void main(String[] args){new AccountDetail("Amit",101,5000,1000,2000,500).display();}
+<section class="slip" id="slip-6"><h2>Slip 6</h2><h3>Q1 — Java: Account, SavingAccount and AccountDetail inheritance</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+class Account { 
+    String custname; 
+    int accno; 
+ 
+    Account() { 
+        custname = ""; 
+        accno = 0; 
+
+    } 
+    Account(String custname, int accno) { 
+        this.custname = custname; 
+        this.accno = accno; 
+    } 
+} 
+class SavingAccount extends Account { 
+    double savingbal; 
+    double minbal; 
+ 
+    SavingAccount(String custname, int accno, double savingbal, double minbal) { 
+        super(custname, accno); 
+        this.savingbal = savingbal; 
+        this.minbal = minbal; 
+    } 
+} 
+ 
+class AccountDetail extends SavingAccount { 
+    double depositamt; 
+    double withdrawalamt; 
+    AccountDetail(String custname, int accno, double savingbal, 
+                  double minbal, double depositamt, double withdrawalamt) { 
+        super(custname, accno, savingbal, minbal); 
+
+        this.depositamt = depositamt; 
+        this.withdrawalamt = withdrawalamt; 
+    } 
+    void display() { 
+        double balance = savingbal + depositamt - withdrawalamt; 
+        System.out.println("\n--- Customer Account Details ---"); 
+        System.out.println("Customer Name     : " + custname); 
+        System.out.println("Account Number    : " + accno); 
+        System.out.println("Saving Balance   : " + savingbal); 
+        System.out.println("Minimum Balance  : " + minbal); 
+        System.out.println("Deposit Amount   : " + depositamt); 
+        System.out.println("Withdrawal Amount: " + withdrawalamt); 
+        System.out.println("Current Balance  : " + balance); 
+    } 
+} 
+public class AccountDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter Customer Name: "); 
+        String name = sc.nextLine(); 
+        System.out.print("Enter Account Number: "); 
+        int accno = sc.nextInt(); 
+        System.out.print("Enter Saving Balance: "); 
+
+        double savingbal = sc.nextDouble(); 
+        System.out.print("Enter Minimum Balance: "); 
+        double minbal = sc.nextDouble(); 
+        System.out.print("Enter Deposit Amount: "); 
+        double depositamt = sc.nextDouble(); 
+ 
+        System.out.print("Enter Withdrawal Amount: "); 
+        double withdrawalamt = sc.nextDouble(); 
+ 
+        AccountDetail a = new AccountDetail( 
+            name, accno, savingbal, minbal, depositamt, withdrawalamt 
+        ); 
+        a.display(); 
+    } 
 }</code></pre><h3>Q2 — HTML: Hover effects on button and link</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -358,18 +619,68 @@ Hover Button&lt;/button&gt;
 Hover Link&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-7"><h2>Slip 7</h2><h3>Q1 — Java: Driver with user-defined exception</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>class Main extends Exception { AgeException(String m){super(m);} }
-class Driver {
- int license_no,age; String name,address;
- Driver(int l,String n,String a,int age)throws AgeException{
-  if(age&lt;18)throw new AgeException("Age is below 18 years");
-  license_no=l;name=n;address=a;this.age=age;
- }
- void display(){System.out.println(license_no+" "+name+" "+address+" "+age);}
- public static void main(String[] args){
-  try{new Driver(101,"Ravi","Pune",20).display();}
-  catch(AgeException e){System.out.println(e.getMessage());}
- }
+<section class="slip" id="slip-7"><h2>Slip 7</h2><h3>Q1 — Java: Driver with user-defined exception</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+ 
+
+class AgeException extends Exception { 
+    AgeException(String message) { 
+        super(message); 
+    } 
+} 
+ 
+class Driver { 
+    String license_no; 
+    String name; 
+    String address; 
+    int age; 
+ 
+    Driver(String license_no, String name, String address, int age) 
+            throws AgeException { 
+ 
+        if (age &lt; 18) { 
+            throw new AgeException("Age is below 18 years"); 
+        } 
+ 
+        this.license_no = license_no; 
+        this.name = name; 
+        this.address = address; 
+        this.age = age; 
+
+    } 
+ 
+    void display() { 
+        System.out.println("\n--- Driver Details ---"); 
+        System.out.println("License No : " + license_no); 
+        System.out.println("Name       : " + name); 
+        System.out.println("Address    : " + address); 
+        System.out.println("Age        : " + age); 
+    } 
+} 
+ 
+public class DriverDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+ 
+        System.out.print("Enter License Number: "); 
+        String license = sc.nextLine(); 
+ 
+        System.out.print("Enter Name: "); 
+        String name = sc.nextLine(); 
+ 
+        System.out.print("Enter Address: "); 
+        String address = sc.nextLine(); 
+
+ 
+        System.out.print("Enter Age: "); 
+        int age = sc.nextInt(); 
+ 
+        try { 
+            Driver d = new Driver(license, name, address, age); 
+            d.display(); 
+        } catch (AgeException e) { 
+            System.out.println("Exception: " + e.getMessage()); 
+        } 
+    } 
 }</code></pre><h3>Q2 — HTML: Style first and last list items</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -393,11 +704,78 @@ JavaScript&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-8"><h2>Slip 8</h2><h3>Q1 — Java: Abstract Shape and method overriding</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>abstract class Main { abstract void printArea(); }
-class Rectangle extends Shape { int l=10,b=5; void printArea(){System.out.println("Rectangle area = "+(l*b));} }
-class Triangle extends Shape { int b=10,h=6; void printArea(){System.out.println("Triangle area = "+(0.5*b*h));} }
-class Circle extends Shape { double r=7; void printArea(){System.out.println("Circle area = "+(Math.PI*r*r));} }
-class Slip8Q1 { public static void main(String[] args){new Rectangle().printArea();new Triangle().printArea();new Circle().printArea();} }</code></pre><h3>Q2 — HTML/JavaScript: Replace displayed image</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
+<section class="slip" id="slip-8"><h2>Slip 8</h2><h3>Q1 — Java: Abstract Shape and method overriding</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+ 
+abstract class Shape { 
+    int a, b; 
+ 
+
+    abstract void printArea(); 
+} 
+ 
+class Rectangle extends Shape { 
+    Rectangle(int length, int breadth) { 
+        a = length; 
+        b = breadth; 
+    } 
+ 
+    void printArea() { 
+        System.out.println("Area of Rectangle = " + (a * b)); 
+    } 
+} 
+ 
+class Triangle extends Shape { 
+    Triangle(int base, int height) { 
+        a = base; 
+        b = height; 
+    } 
+ 
+    void printArea() { 
+        System.out.println("Area of Triangle = " + (0.5 * a * b)); 
+    } 
+
+} 
+ 
+class Circle extends Shape { 
+    Circle(int radius) { 
+        a = radius; 
+    } 
+ 
+    void printArea() { 
+        System.out.println("Area of Circle = " + (Math.PI * a * a)); 
+    } 
+} 
+ 
+public class ShapeDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+ 
+        System.out.print("Enter length of rectangle: "); 
+        int length = sc.nextInt(); 
+ 
+        System.out.print("Enter breadth of rectangle: "); 
+        int breadth = sc.nextInt(); 
+ 
+        Rectangle r = new Rectangle(length, breadth); 
+
+        r.printArea(); 
+ 
+        System.out.print("Enter base of triangle: "); 
+        int base = sc.nextInt(); 
+ 
+        System.out.print("Enter height of triangle: "); 
+        int height = sc.nextInt(); 
+ 
+        Triangle t = new Triangle(base, height); 
+        t.printArea(); 
+ 
+        System.out.print("Enter radius of circle: "); 
+        int radius = sc.nextInt(); 
+ 
+        Circle c = new Circle(radius); 
+        c.printArea(); 
+    } 
+}</code></pre><h3>Q2 — HTML/JavaScript: Replace displayed image</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;
@@ -411,19 +789,48 @@ Image Change&lt;/h2&gt;
 Change Image&lt;/button&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></section>
-<section class="slip" id="slip-9"><h2>Slip 9</h2><h3>Q1 — Java: Employee with maximum salary (array of objects)</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.*;
-class Main {
- int id; String name; double salary;
- Employee(int i,String n,double s){id=i;name=n;salary=s;}
-}
-class Slip9Q1 {
- public static void main(String[] args){
-  Scanner sc=new Scanner(System.in);System.out.print("Number of employees: ");int n=sc.nextInt();
-  Employee[] e=new Employee[n];
-  for(int i=0;i&lt;n;i++){System.out.print("ID name salary: ");int id=sc.nextInt();String name=sc.next();double sal=sc.nextDouble();e[i]=new Employee(id,name,sal);}
-  Employee max=e[0];for(Employee x:e)if(x.salary&gt;max.salary)max=x;
-  System.out.println("Highest salary: "+max.name+" "+max.salary);
- }
+<section class="slip" id="slip-9"><h2>Slip 9</h2><h3>Q1 — Java: Employee with maximum salary (array of objects)</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+
+class Employee { 
+    int id; 
+    String name; 
+    double salary; 
+    Employee(int id, String name, double salary) { 
+        this.id = id; 
+        this.name = name; 
+        this.salary = salary; 
+    } 
+} 
+ 
+public class EmployeeDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter number of employees: "); 
+        int n = sc.nextInt(); 
+        Employee[] emp = new Employee[n]; 
+        for (int i = 0; i &lt; n; i++) { 
+            System.out.println("\nEnter details of Employee " + (i + 1)); 
+            System.out.print("Enter ID: "); 
+            int id = sc.nextInt(); 
+            sc.nextLine(); 
+            System.out.print("Enter Name: "); 
+
+            String name = sc.nextLine(); 
+            System.out.print("Enter Salary: "); 
+            double salary = sc.nextDouble(); 
+            emp[i] = new Employee(id, name, salary); 
+        } 
+        int maxIndex = 0; 
+        for (int i = 1; i &lt; n; i++) { 
+            if (emp[i].salary &gt; emp[maxIndex].salary) { 
+                maxIndex = i; 
+            } 
+        } 
+ 
+        System.out.println("\nEmployee with Maximum Salary:"); 
+        System.out.println("Name   : " + emp[maxIndex].name); 
+        System.out.println("Salary : " + emp[maxIndex].salary); 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Arrow functions for arithmetic</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const add=(a,b)=&gt;a+b;
 const sub=(a,b)=&gt;a-b;
 const mul=(a,b)=&gt;a*b;
@@ -433,12 +840,29 @@ console.log("Addition:",add(a,b));
 console.log("Subtraction:",sub(a,b));
 console.log("Multiplication:",mul(a,b));
 console.log("Division:",div(a,b));</code></pre></section>
-<section class="slip" id="slip-10"><h2>Slip 10</h2><h3>Q1 — Java: Read abc.txt and display uppercase</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.nio.file.*;
-class Main {
- public static void main(String[] args)throws Exception{
-  String text=Files.readString(Path.of("abc.txt"));
-  System.out.println(text.toUpperCase());
- }
+<section class="slip" id="slip-10"><h2>Slip 10</h2><h3>Q1 — Java: Read abc.txt and display uppercase</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.io.File; 
+import java.io.FileNotFoundException; 
+import java.util.Scanner; 
+ 
+public class FileUppercase { 
+    public static void main(String[] args) { 
+        try { 
+            File file = new File("abc.txt"); 
+            Scanner sc = new Scanner(file); 
+ 
+            System.out.println("File contents in uppercase:"); 
+ 
+            while (sc.hasNextLine()) { 
+                String line = sc.nextLine(); 
+                System.out.println(line.toUpperCase()); 
+            } 
+ 
+            sc.close(); 
+        } catch (FileNotFoundException e) { 
+            System.out.println("File not found."); 
+
+        } 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Student report using template literals</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>let name="Rahul Sharma",rollNo=101,age=18;
 let math=85,science=90,english=78;
 let total=math+science+english,percentage=total/3;
@@ -453,119 +877,520 @@ English: ${english}
 Total: ${total}
 Percentage: ${percentage.toFixed(2)}%
 `);</code></pre></section>
-<section class="slip" id="slip-11"><h2>Slip 11</h2><h3>Q1 — Java: Vehicle and derived vehicle classes</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.*;
-class Main { String company; double price; Vehicle(String c,double p){company=c;price=p;} }
-class LightMotorVehicle extends Vehicle { double mileage; LightMotorVehicle(String c,double p,double m){super(c,p);mileage=m;} void show(){System.out.println(company+" "+price+" Mileage:"+mileage);} }
-class HeavyMotorVehicle extends Vehicle { double capacity; HeavyMotorVehicle(String c,double p,double t){super(c,p);capacity=t;} void show(){System.out.println(company+" "+price+" Capacity:"+capacity+" tons");} }
-class Slip11Q1 { public static void main(String[] args){new LightMotorVehicle("Tata",600000,18).show();new HeavyMotorVehicle("Volvo",2500000,12).show();} }</code></pre><h3>Q2 — JavaScript: Total and average of three subjects</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const calculate=(a,b,c)=&gt;({total:a+b+c,average:(a+b+c)/3});
+<section class="slip" id="slip-11"><h2>Slip 11</h2><h3>Q1 — Java: Vehicle and derived vehicle classes</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+class Vehicle { 
+    String company; 
+    double price; 
+    Vehicle(String company, double price) { 
+        this.company = company; 
+        this.price = price; 
+    } 
+} 
+ 
+class LightMotorVehicle extends Vehicle { 
+    double mileage; 
+    LightMotorVehicle(String company, double price, double mileage) { 
+
+        super(company, price); 
+        this.mileage = mileage; 
+    } 
+    void display() { 
+        System.out.println("Vehicle Type : Light Motor Vehicle"); 
+        System.out.println("Company      : " + company); 
+        System.out.println("Price        : " + price); 
+        System.out.println("Mileage      : " + mileage + " km/l"); 
+    } 
+} 
+class HeavyMotorVehicle extends Vehicle { 
+    double capacity_in_tons; 
+    HeavyMotorVehicle(String company, double price, double capacity_in_tons) { 
+        super(company, price); 
+        this.capacity_in_tons = capacity_in_tons; 
+    } 
+    void display() { 
+        System.out.println("Vehicle Type : Heavy Motor Vehicle"); 
+        System.out.println("Company      : " + company); 
+        System.out.println("Price        : " + price); 
+        System.out.println("Capacity     : " + capacity_in_tons + " tons"); 
+    } 
+} 
+
+public class VehicleDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter number of vehicles: "); 
+        int n = sc.nextInt(); 
+        Vehicle[] vehicles = new Vehicle[n]; 
+        for (int i = 0; i &lt; n; i++) { 
+            System.out.println("\nVehicle " + (i + 1)); 
+            System.out.println("1. Light Motor Vehicle"); 
+            System.out.println("2. Heavy Motor Vehicle"); 
+            System.out.print("Enter vehicle type: "); 
+            int type = sc.nextInt(); 
+            sc.nextLine(); 
+           System.out.print("Enter Company: "); 
+            String company = sc.nextLine(); 
+            System.out.print("Enter Price: "); 
+           double price = sc.nextDouble(); 
+            if (type == 1) { 
+                System.out.print("Enter Mileage: "); 
+                double mileage = sc.nextDouble(); 
+                vehicles[i] = new LightMotorVehicle(company, price, mileage); 
+            }  
+            else if (type == 2) { 
+
+                System.out.print("Enter Capacity in Tons: "); 
+                double capacity = sc.nextDouble(); 
+                vehicles[i] = new HeavyMotorVehicle(company, price, capacity); 
+            }  
+            else { 
+                System.out.println("Invalid vehicle type."); 
+                i--; 
+            } 
+        } 
+        System.out.println("\n--- Vehicle Details ---"); 
+        for (int i = 0; i &lt; n; i++) { 
+            if (vehicles[i] instanceof LightMotorVehicle) { 
+                ((LightMotorVehicle) vehicles[i]).display(); 
+            }  
+            else if (vehicles[i] instanceof HeavyMotorVehicle) { 
+                ((HeavyMotorVehicle) vehicles[i]).display(); 
+            } 
+            System.out.println(); 
+        } 
+        sc.close(); 
+    } 
+}</code></pre><h3>Q2 — JavaScript: Total and average of three subjects</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const calculate=(a,b,c)=&gt;({total:a+b+c,average:(a+b+c)/3});
 let result=calculate(85,90,78);
 console.log(`Total: ${result.total}\nAverage: ${result.average.toFixed(2)}`);</code></pre></section>
-<section class="slip" id="slip-12"><h2>Slip 12</h2><h3>Q1 — Java: Package game with Indoor and Outdoor</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>// Simple version using two classes in one file
-class Main {
- String game; int players;
- Indoor(){this("Chess",2);}
- Indoor(String g,int p){game=g;players=p;}
- void display(){System.out.println("Indoor game: "+game+", players: "+players);}
-}
-class Outdoor {
- String game; int players;
- Outdoor(){this("Cricket",11);}
- Outdoor(String g,int p){game=g;players=p;}
- void display(){System.out.println("Outdoor game: "+game+", players: "+players);}
-}
-class Slip12Q1 { public static void main(String[] args){new Indoor().display();new Outdoor().display();} }</code></pre><h3>Q2 — JavaScript: Product bill</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const totalPrice=(price,quantity)=&gt;price*quantity;
+<section class="slip" id="slip-12"><h2>Slip 12</h2><h3>Q1 — Java: Package game with Indoor and Outdoor</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>Step 1: mkdir -p JavaProject/game; 
+Step 2: cd JavaProject 
+Step 3:vim game/Indoor.java 
+package game; 
+public class Indoor { 
+    String game; 
+    String[] players; 
+    public Indoor() { 
+        game = "Carrom"; 
+        players = new String[]{"Rahul", "Amit", "Priya", "Sneha"}; 
+    } 
+    public Indoor(String game, String[] players) { 
+        this.game = game; 
+        this.players = players; 
+    } 
+    public void display() { 
+        System.out.println("Indoor Game: " + game); 
+        System.out.println("Players:"); 
+        for (String p : players) { 
+
+            System.out.println(p); 
+        } 
+    } 
+} 
+Step 4:vim game/Outdoor.java 
+package game; 
+public class Outdoor { 
+    String game; 
+    String[] players; 
+    public Outdoor() { 
+        game = "Cricket"; 
+        players = new String[]{"Virat", "Rohit", "Rahul", "Hardik"}; 
+    } 
+    public Outdoor(String game, String[] players) { 
+        this.game = game; 
+        this.players = players; 
+    } 
+    public void display() { 
+        System.out.println("Outdoor Game: " + game); 
+        System.out.println("Players:"); 
+        for (String p : players) { 
+            System.out.println(p); 
+
+        } 
+    } 
+} 
+ 
+Step 5: vim GameDemo.java 
+import game.Indoor; 
+import game.Outdoor; 
+public class GameDemo { 
+    public static void main(String[] args) { 
+        Indoor i = new Indoor(); 
+        i.display(); 
+        System.out.println(); 
+        String[] players = {"Amit", "Sagar", "Rohit", "Akash"}; 
+        Outdoor o = new Outdoor("Football", players); 
+        o.display(); 
+    } 
+} 
+Step 6: javac game/Indoor.java game/Outdoor.java GameDemo.java 
+                        OR  
+            javac gameDemo.java 
+Step 7: java gameDemo</code></pre><h3>Q2 — JavaScript: Product bill</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const totalPrice=(price,quantity)=&gt;price*quantity;
 let product="Laptop",price=50000,quantity=2;
 console.log(`PRODUCT BILL
 Product: ${product}
 Price: Rs.${price}
 Quantity: ${quantity}
 Total: Rs.${totalPrice(price,quantity)}`);</code></pre></section>
-<section class="slip" id="slip-13"><h2>Slip 13</h2><h3>Q1 — Java: Clock validation and AM/PM</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.*;
-class Main {
- int h,m,s;
- Clock(int h,int m,int s){this.h=h;this.m=m;this.s=s;}
- void display(){
-  if(h&lt;0||h&gt;23||m&lt;0||m&gt;59||s&lt;0||s&gt;59){System.out.println("Invalid time");return;}
-  String period=h&gt;=12?"PM":"AM";int hour=h%12;if(hour==0)hour=12;
-  System.out.printf("%02d:%02d:%02d %s%n",hour,m,s,period);
- }
- public static void main(String[] args){Scanner sc=new Scanner(System.in);System.out.print("Enter hour minute second: ");new Clock(sc.nextInt(),sc.nextInt(),sc.nextInt()).display();}
+<section class="slip" id="slip-13"><h2>Slip 13</h2><h3>Q1 — Java: Clock validation and AM/PM</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+class Clock { 
+    int hours; 
+    int minutes; 
+    int seconds; 
+    Clock() { 
+        hours = 0; 
+        minutes = 0; 
+        seconds = 0; 
+    } 
+    Clock(int hours, int minutes, int seconds) { 
+        this.hours = hours; 
+        this.minutes = minutes; 
+        this.seconds = seconds; 
+    } 
+    boolean isValid() { 
+        if (hours &lt; 0 || hours &gt; 23) 
+            return false; 
+
+ 
+        if (minutes &lt; 0 || minutes &gt; 59) 
+            return false; 
+        if (seconds &lt; 0 || seconds &gt; 59) 
+            return false; 
+        return true; 
+    } 
+    void displayAMPM() { 
+        int h = hours; 
+        String period; 
+        if (h &gt;= 12) 
+            period = "PM"; 
+        else 
+            period = "AM"; 
+        if (h == 0) 
+            h = 12; 
+        else if (h &gt; 12) 
+            h = h - 12; 
+        System.out.printf("Time in AM/PM format: %02d:%02d:%02d %s", 
+                h, minutes, seconds, period); 
+    } 
+} 
+ 
+
+public class ClockDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter Hours: "); 
+        int h = sc.nextInt(); 
+        System.out.print("Enter Minutes: "); 
+        int m = sc.nextInt(); 
+        System.out.print("Enter Seconds: "); 
+        int s = sc.nextInt(); 
+        Clock c = new Clock(h, m, s); 
+        if (c.isValid()) { 
+            System.out.println("Time is valid."); 
+            c.displayAMPM(); 
+        } else { 
+            System.out.println("Invalid time."); 
+        } 
+        sc.close(); 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Swap two numbers with destructuring</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>let a=10,b=20;
 console.log(`Before: a=${a}, b=${b}`);
 [a,b]=[b,a];
 console.log(`After: a=${a}, b=${b}`);</code></pre></section>
-<section class="slip" id="slip-14"><h2>Slip 14</h2><h3>Q1 — JavaFX: Prime number check</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>// Save as PrimeApp.java; requires JavaFX configured.
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
-public class Main extends Application {
- public void start(Stage stage){
-  TextField input=new TextField();Label result=new Label();Button b=new Button("Process");
-  b.setOnAction(e-&gt;{try{int n=Integer.parseInt(input.getText());boolean prime=n&gt;1;for(int i=2;i*i&lt;=n;i++)if(n%i==0)prime=false;result.setText(prime?"Prime number":"Not prime");}catch(Exception ex){result.setText("Enter a valid number");}});
-  VBox root=new VBox(10,new Label("Enter number:"),input,b,result);root.setStyle("-fx-padding:20");
-  stage.setScene(new Scene(root,300,180));stage.setTitle("Prime Checker");stage.show();
- }
- public static void main(String[] args){launch(args);}
+<section class="slip" id="slip-14"><h2>Slip 14</h2><h3>Q1 — JavaFX: Prime number check</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import javafx.application.Application; 
+import javafx.scene.Scene; 
+import javafx.scene.control.*; 
+import javafx.scene.layout.*; 
+import javafx.stage.Stage; 
+ 
+public class PrimeNumber extends Application { 
+ 
+    public void start(Stage stage) { 
+ 
+        Label inputLabel = new Label("Enter Number:"); 
+        TextField inputField = new TextField(); 
+ 
+        Label outputLabel = new Label("Result:"); 
+        TextField outputField = new TextField(); 
+        outputField.setEditable(false); 
+ 
+        Button processButton = new Button("Process"); 
+ 
+
+        processButton.setOnAction(e -&gt; { 
+            int n = Integer.parseInt(inputField.getText()); 
+            boolean prime = true; 
+ 
+            if (n &lt;= 1) { 
+                prime = false; 
+            } else { 
+                for (int i = 2; i &lt;= n / 2; i++) { 
+                    if (n % i == 0) { 
+                        prime = false; 
+                        break; 
+                    } 
+                } 
+            } 
+ 
+            if (prime) 
+                outputField.setText(n + " is a Prime Number"); 
+            else 
+                outputField.setText(n + " is Not a Prime Number"); 
+        }); 
+ 
+        VBox root = new VBox(10); 
+        root.getChildren().addAll( 
+
+                inputLabel, inputField, 
+                processButton, 
+                outputLabel, outputField 
+        ); 
+ 
+        Scene scene = new Scene(root, 350, 250); 
+ 
+        stage.setTitle("Prime Number Checker"); 
+        stage.setScene(scene); 
+        stage.show(); 
+    } 
+ 
+    public static void main(String[] args) { 
+        launch(args); 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Object destructuring</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>let employee={name:"Rahul Sharma",department:"IT",salary:50000};
 let {name,department,salary}=employee;
 console.log(`Employee Details
 Name: ${name}
 Department: ${department}
 Salary: Rs.${salary}`);</code></pre></section>
-<section class="slip" id="slip-15"><h2>Slip 15</h2><h3>Q1 — JavaFX: Simple calculator</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>// Save as CalculatorApp.java; requires JavaFX configured.
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
-public class Main extends Application {
- public void start(Stage stage){
-  TextField a=new TextField(),b=new TextField();Label out=new Label();Button add=new Button("+"),sub=new Button("-"),mul=new Button("*"),div=new Button("/");
-  add.setOnAction(e-&gt;calc(a,b,out,'+'));sub.setOnAction(e-&gt;calc(a,b,out,'-'));mul.setOnAction(e-&gt;calc(a,b,out,'*'));div.setOnAction(e-&gt;calc(a,b,out,'/'));
-  VBox root=new VBox(8,new Label("First number"),a,new Label("Second number"),b,new HBox(8,add,sub,mul,div),out);root.setStyle("-fx-padding:20");
-  stage.setScene(new Scene(root,300,260));stage.setTitle("Calculator");stage.show();
- }
- void calc(TextField a,TextField b,Label out,char op){try{double x=Double.parseDouble(a.getText()),y=Double.parseDouble(b.getText());if(op=='/'&amp;&amp;y==0){out.setText("Cannot divide by zero");return;}double z=op=='+'?x+y:op=='-'?x-y:op=='*'?x*y:x/y;out.setText("Result: "+z);}catch(Exception e){out.setText("Enter valid numbers");}}
- public static void main(String[] args){launch(args);}
+<section class="slip" id="slip-15"><h2>Slip 15</h2><h3>Q1 — JavaFX: Simple calculator</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import javafx.application.Application; 
+import javafx.scene.Scene; 
+
+import javafx.scene.control.Button; 
+import javafx.scene.control.TextField; 
+import javafx.scene.layout.GridPane; 
+import javafx.stage.Stage; 
+ 
+public class Calculator extends Application { 
+ 
+    TextField display = new TextField(); 
+    double num1 = 0; 
+    double num2 = 0; 
+    String operator = ""; 
+ 
+    public void start(Stage stage) { 
+ 
+        display.setEditable(false); 
+ 
+        GridPane grid = new GridPane(); 
+        grid.setHgap(5); 
+        grid.setVgap(5); 
+ 
+        Button b0 = new Button("0"); 
+        Button b1 = new Button("1"); 
+        Button b2 = new Button("2"); 
+
+        Button b3 = new Button("3"); 
+        Button b4 = new Button("4"); 
+        Button b5 = new Button("5"); 
+        Button b6 = new Button("6"); 
+        Button b7 = new Button("7"); 
+        Button b8 = new Button("8"); 
+        Button b9 = new Button("9"); 
+ 
+        Button add = new Button("+"); 
+        Button sub = new Button("-"); 
+        Button mul = new Button("*"); 
+        Button div = new Button("/"); 
+        Button equal = new Button("="); 
+ 
+        Button[] digits = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9}; 
+ 
+        for (Button b : digits) { 
+            b.setOnAction(e -&gt; { 
+                display.appendText(b.getText()); 
+            }); 
+        } 
+ 
+        add.setOnAction(e -&gt; setOperator("+")); 
+
+        sub.setOnAction(e -&gt; setOperator("-")); 
+        mul.setOnAction(e -&gt; setOperator("*")); 
+        div.setOnAction(e -&gt; setOperator("/")); 
+ 
+        equal.setOnAction(e -&gt; calculate()); 
+ 
+        grid.add(display, 0, 0, 4, 1); 
+ 
+        grid.add(b7, 0, 1); 
+        grid.add(b8, 1, 1); 
+        grid.add(b9, 2, 1); 
+        grid.add(div, 3, 1); 
+ 
+        grid.add(b4, 0, 2); 
+        grid.add(b5, 1, 2); 
+        grid.add(b6, 2, 2); 
+        grid.add(mul, 3, 2); 
+ 
+        grid.add(b1, 0, 3); 
+        grid.add(b2, 1, 3); 
+        grid.add(b3, 2, 3); 
+        grid.add(sub, 3, 3); 
+ 
+
+        grid.add(b0, 0, 4); 
+        grid.add(equal, 1, 4); 
+        grid.add(add, 3, 4); 
+ 
+        Scene scene = new Scene(grid, 300, 250); 
+ 
+        stage.setTitle("Simple Calculator"); 
+        stage.setScene(scene); 
+        stage.show(); 
+    } 
+ 
+    void setOperator(String op) { 
+        num1 = Double.parseDouble(display.getText()); 
+        operator = op; 
+        display.clear(); 
+    } 
+ 
+    void calculate() { 
+        num2 = Double.parseDouble(display.getText()); 
+ 
+        double result = 0; 
+ 
+        if (operator.equals("+")) 
+
+            result = num1 + num2; 
+        else if (operator.equals("-")) 
+            result = num1 - num2; 
+        else if (operator.equals("*")) 
+            result = num1 * num2; 
+        else if (operator.equals("/")) { 
+            if (num2 == 0) { 
+                display.setText("Cannot divide by zero"); 
+                return; 
+            } 
+            result = num1 / num2; 
+        } 
+ 
+        display.setText(String.valueOf(result)); 
+    } 
+ 
+    public static void main(String[] args) { 
+        launch(args); 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Copy array using spread operator</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>let original=["Apple","Banana","Mango"];
 let copy=[...original];
 copy.push("Orange");
 console.log("Original:",original);
 console.log("Copy:",copy);</code></pre></section>
-<section class="slip" id="slip-16"><h2>Slip 16</h2><h3>Q1 — JavaFX: Shopping cart (simple)</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>// Save as CartApp.java; requires JavaFX configured.
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
-public class Main extends Application {
- int total=0;Label cart=new Label("Total: Rs.0");
- public void start(Stage stage){
-  Button apple=new Button("Add Apple Rs.30"),bread=new Button("Add Bread Rs.40");
-  apple.setOnAction(e-&gt;add(30));bread.setOnAction(e-&gt;add(40));
-  VBox root=new VBox(10,apple,bread,cart);root.setStyle("-fx-padding:20");
-  stage.setScene(new Scene(root,250,160));stage.setTitle("Shopping Cart");stage.show();
- }
- void add(int price){total+=price;cart.setText("Total: Rs."+total);}
- public static void main(String[] args){launch(args);}
+<section class="slip" id="slip-16"><h2>Slip 16</h2><h3>Q1 — JavaFX: Shopping cart (simple)</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import javafx.application.Application; 
+import javafx.scene.Scene; 
+import javafx.scene.control.*; 
+import javafx.scene.layout.*; 
+import javafx.stage.Stage; 
+ 
+public class ShoppingCart extends Application { 
+ 
+    TextArea cartArea = new TextArea(); 
+    Label totalLabel = new Label("Total: ₹0.00"); 
+    double total = 0; 
+ 
+    public void start(Stage stage) { 
+ 
+        Button apple = new Button("Apple - ₹50"); 
+        Button milk = new Button("Milk - ₹30"); 
+        Button bread = new Button("Bread - ₹40"); 
+        Button rice = new Button("Rice - ₹60"); 
+ 
+        cartArea.setEditable(false); 
+ 
+        apple.setOnAction(e -&gt; addItem("Apple", 50)); 
+
+        milk.setOnAction(e -&gt; addItem("Milk", 30)); 
+        bread.setOnAction(e -&gt; addItem("Bread", 40)); 
+        rice.setOnAction(e -&gt; addItem("Rice", 60)); 
+ 
+        VBox items = new VBox(10); 
+        items.getChildren().addAll( 
+                new Label("Available Items"), 
+                apple, milk, bread, rice 
+        ); 
+ 
+        VBox cart = new VBox(10); 
+        cart.getChildren().addAll( 
+                new Label("Shopping Cart"), 
+                cartArea, 
+                totalLabel 
+        ); 
+ 
+        HBox root = new HBox(30); 
+        root.getChildren().addAll(items, cart); 
+ 
+        Scene scene = new Scene(root, 500, 350); 
+ 
+        stage.setTitle("Shopping Cart"); 
+
+        stage.setScene(scene); 
+        stage.show(); 
+    } 
+ 
+    void addItem(String item, double price) { 
+        cartArea.appendText(item + " - ₹" + price + "\n"); 
+        total = total + price; 
+        totalLabel.setText("Total: ₹" + total); 
+    } 
+ 
+    public static void main(String[] args) { 
+        launch(args); 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Sum using rest parameter</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>function sum(...numbers){return numbers.reduce((total,n)=&gt;total+n,0);}
 console.log("Sum:",sum(10,20,30,40));</code></pre></section>
-<section class="slip" id="slip-18"><h2>Slip 18</h2><h3>Q1 — JavaFX: Buttons to change background color</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>// Save as ColorApp.java; requires JavaFX configured.
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
-public class Main extends Application {
- public void start(Stage stage){
-  Pane root=new Pane();Button red=new Button("Red"),green=new Button("Green"),blue=new Button("Blue");
-  HBox box=new HBox(10,red,green,blue);root.getChildren().add(box);
-  red.setOnAction(e-&gt;root.setStyle("-fx-background-color:red"));green.setOnAction(e-&gt;root.setStyle("-fx-background-color:lightgreen"));blue.setOnAction(e-&gt;root.setStyle("-fx-background-color:lightblue"));
-  stage.setScene(new Scene(root,350,200));stage.setTitle("Color Buttons");stage.show();
- }
- public static void main(String[] args){launch(args);}
+<section class="slip" id="slip-18"><h2>Slip 18</h2><h3>Q1 — JavaFX: Buttons to change background color</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import javafx.application.Application; 
+import javafx.scene.Scene; 
+import javafx.scene.control.Button; 
+import javafx.scene.layout.HBox; 
+import javafx.stage.Stage; 
+ 
+public class ColorButtons extends Application { 
+ 
+    public void start(Stage stage) { 
+ 
+        Button red = new Button("Red"); 
+
+        Button green = new Button("Green"); 
+        Button blue = new Button("Blue"); 
+ 
+        HBox root = new HBox(20); 
+        root.getChildren().addAll(red, green, blue); 
+ 
+        Scene scene = new Scene(root, 400, 200); 
+ 
+        red.setOnAction(e -&gt; { 
+            root.setStyle("-fx-background-color: red;"); 
+            System.out.println("Red"); 
+        }); 
+ 
+        green.setOnAction(e -&gt; { 
+            root.setStyle("-fx-background-color: green;"); 
+            System.out.println("Green"); 
+        }); 
+ 
+        blue.setOnAction(e -&gt; { 
+            root.setStyle("-fx-background-color: blue;"); 
+            System.out.println("Blue"); 
+        }); 
+ 
+        stage.setTitle("Color Buttons"); 
+        stage.setScene(scene); 
+        stage.show(); 
+    } 
+ 
+    public static void main(String[] args) { 
+        launch(args); 
+    } 
 }</code></pre><h3>Q2 — Node.js: Basic HTTP server</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const http=require('http');
 const server=http.createServer((req,res)=&gt;{
  res.writeHead(200,{'Content-Type':'text/html'});
@@ -574,17 +1399,38 @@ Hello from Node.js server!&lt;/h1&gt;
 ');
 });
 server.listen(3000,()=&gt;console.log('Open http://localhost:3000'));</code></pre></section>
-<section class="slip" id="slip-20"><h2>Slip 19</h2><h3>Q1 — Java: Mouse move and click positions (Swing)</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import javax.swing.*;
-import java.awt.event.*;
-class Main extends JFrame {
- JTextField field=new JTextField(20);
- Slip20Q1(){
-  JPanel p=new JPanel();p.add(new JLabel("Mouse click position:"));p.add(field);add(p);
-  addMouseMotionListener(new MouseMotionAdapter(){public void mouseMoved(MouseEvent e){setTitle("Mouse: "+e.getX()+", "+e.getY());}});
-  addMouseListener(new MouseAdapter(){public void mouseClicked(MouseEvent e){field.setText(e.getX()+", "+e.getY());}});
-  setSize(400,200);setTitle("Mouse Events");setDefaultCloseOperation(EXIT_ON_CLOSE);setVisible(true);
- }
- public static void main(String[] args){new Slip20Q1();}
+<section class="slip" id="slip-20"><h2>Slip 20</h2><h3>Q1 — Java: Mouse move and click positions (Swing)</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import javafx.application.Application; 
+import javafx.scene.Scene; 
+import javafx.scene.control.Label; 
+import javafx.scene.control.TextField; 
+
+import javafx.scene.layout.VBox; 
+import javafx.stage.Stage; 
+public class MouseEvents extends Application { 
+    public void start(Stage stage) { 
+        Label label = new Label("Move or Click the Mouse"); 
+        TextField textField = new TextField(); 
+        textField.setEditable(false); 
+        VBox root = new VBox(15); 
+        root.getChildren().addAll(label, textField); 
+ 
+        Scene scene = new Scene(root, 500, 300); 
+        scene.setOnMouseMoved(e -&gt; { 
+            label.setText("Mouse Position: X = " + 
+                    (int)e.getX() + ", Y = " + (int)e.getY()); 
+        }); 
+        scene.setOnMouseClicked(e -&gt; { 
+            textField.setText("Mouse Clicked at: X = " + 
+                    (int)e.getX() + ", Y = " + (int)e.getY()); 
+        }); 
+        stage.setTitle("Mouse Event Handling"); 
+        stage.setScene(scene); 
+        stage.show(); 
+    } 
+
+    public static void main(String[] args) { 
+        launch(args); 
+    } 
 }</code></pre><h3>Q2 — JavaScript: Promise division</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>function divide(a,b){
  return new Promise((resolve,reject)=&gt;{
   if(b===0)reject("Cannot divide by zero");
@@ -593,15 +1439,61 @@ class Main extends JFrame {
 }
 divide(20,4).then(result=&gt;console.log("Result:",result))
  .catch(error=&gt;console.log("Error:",error));</code></pre></section>
-<section class="slip" id="slip-21"><h2>Slip 21</h2><h3>Q1 — Java: College and Department inheritance</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>class Main {
- int cno;String cname,caddr;
- College(int no,String name,String addr){cno=no;cname=name;caddr=addr;}
-}
-class Department extends College {
- int dno;String dname;
- Department(int c,String n,String a,int d,String dn){super(c,n,a);dno=d;dname=dn;}
- void display(){System.out.println("College No: "+cno+"\nCollege: "+cname+"\nAddress: "+caddr+"\nDepartment No: "+dno+"\nDepartment: "+dname);}
- public static void main(String[] args){new Department(1,"ABC College","Pune",10,"Computer Science").display();}
+<section class="slip" id="slip-21"><h2>Slip 21</h2><h3>Q1 — Java: College and Department inheritance</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>import java.util.Scanner; 
+ 
+class College { 
+    int cno; 
+    String cname; 
+    String caddr; 
+ 
+    void acceptCollege() { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter College Number: "); 
+        cno = sc.nextInt(); 
+        sc.nextLine(); 
+        System.out.print("Enter College Name: "); 
+        cname = sc.nextLine(); 
+        System.out.print("Enter College Address: "); 
+
+        caddr = sc.nextLine(); 
+    } 
+ 
+    void displayCollege() { 
+        System.out.println("\nCollege Number: " + cno); 
+        System.out.println("College Name: " + cname); 
+        System.out.println("College Address: " + caddr); 
+    } 
+} 
+ 
+class Department extends College { 
+    int dno; 
+    String dname; 
+ 
+    void acceptDepartment() { 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter Department Number: "); 
+        dno = sc.nextInt(); 
+        sc.nextLine(); 
+        System.out.print("Enter Department Name: "); 
+        dname = sc.nextLine(); 
+    } 
+ 
+
+    void displayDepartment() { 
+        displayCollege(); 
+        System.out.println("Department Number: " + dno); 
+        System.out.println("Department Name: " + dname); 
+    } 
+} 
+ 
+public class CollegeDemo { 
+    public static void main(String[] args) { 
+        Department d = new Department(); 
+        d.acceptCollege(); 
+        d.acceptDepartment(); 
+        System.out.println("\n--- College Details ---"); 
+        d.displayDepartment(); 
+    } 
 }</code></pre><h3>Q2 — Node.js: Path module operations</h3><pre><button class="copy-btn" onclick="copyCode(this)" type="button">Copy Code</button><code>const path=require('path');
 const file='/home/student/docs/notes.txt';
 console.log('Join:',path.join('/home/student','docs','notes.txt'));
@@ -611,41 +1503,33 @@ console.log('File name:',path.basename(file));
 console.log('Extension:',path.extname(file));</code></pre></section>
 <footer style="text-align:center;padding:20px;color:#555">End of selected slips</footer>
 </main>
+
 <script>
 function copyCode(button) {
-    var pre = button.closest('pre');
-    var code = pre ? pre.querySelector('code') : null;
-    if (!code) return;
-    var text = code.innerText || code.textContent;
-    function fallback() {
-        var area = document.createElement('textarea');
-        area.value = text;
-        area.setAttribute('readonly', '');
-        area.style.position = 'fixed';
-        area.style.left = '-9999px';
-        document.body.appendChild(area);
-        area.focus();
-        area.select();
-        area.setSelectionRange(0, area.value.length);
-        var ok = false;
-        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-        document.body.removeChild(area);
-        if (!ok) window.prompt('Copy the code with Ctrl+C:', text);
-        return ok;
-    }
-    if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(function () {
-            copied(button);
-        }).catch(function () {
-            if (fallback()) copied(button);
-        });
-    } else if (fallback()) {
-        copied(button);
-    }
+  var pre = button.closest('pre');
+  var code = pre && pre.querySelector('code');
+  if (!code) return;
+  var text = code.innerText || code.textContent;
+  function fallback() {
+    var area = document.createElement('textarea');
+    area.value = text;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.left = '-9999px';
+    document.body.appendChild(area);
+    area.focus(); area.select(); area.setSelectionRange(0, area.value.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(area);
+    if (!ok) window.prompt('Automatic copying was blocked. Press Ctrl+C:', text);
+    return ok;
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(function(){ done(button); }).catch(function(){ if (fallback()) done(button); });
+  } else if (fallback()) done(button);
 }
-function copied(button) {
-    var old = button.textContent;
-    button.textContent = 'Copied!';
-    setTimeout(function () { button.textContent = old; }, 1500);
+function done(button) {
+  var old = button.textContent; button.textContent = 'Copied!';
+  setTimeout(function(){ button.textContent = old; }, 1500);
 }
 </script></body></html>
