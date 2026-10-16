@@ -1,210 +1,1609 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Science Practical Codes - 1 to 3</title>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>AIML Practical Slips — Short Codes (No Output)</title>
 <style>
-:root{--bg:#090b10;--panel:#151923;--border:#303746;--text:#f3f5f8;--muted:#aeb7c6;--accent:#d9fff6}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:145px}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Arial,Helvetica,sans-serif}
-header{position:sticky;top:0;z-index:10;background:rgba(9,11,16,.97);border-bottom:1px solid var(--border);padding:16px clamp(12px,3vw,28px)}
-main{max-width:1150px;margin:auto;padding:22px clamp(10px,3vw,26px) 60px}
-h1{font-size:clamp(23px,3vw,32px);margin:0 0 5px}
-.sub{color:var(--muted);font-size:14px;margin-bottom:12px}
-nav{display:flex;flex-wrap:wrap;gap:8px}
-button{cursor:pointer;border:1px solid #566171;border-radius:8px;padding:9px 13px;font-weight:bold}
-nav button,.copy{background:#252b37;color:#fff}
-nav button:hover,.copy:hover{background:var(--accent);color:#101820}
-.card{margin:24px 0 34px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--panel);scroll-margin-top:145px}
-.head{padding:16px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-h2{font-size:20px;margin:0}
-.desc{color:var(--muted);font-size:13px;margin-top:4px}
-.actions{display:flex;justify-content:flex-end;padding:10px 12px 0}
-pre{margin:0;padding:16px;background:#050609;overflow:auto;white-space:pre;tab-size:4}
-code{font:13px/1.6 Consolas,Monaco,"Courier New",monospace;color:#f1f3f6}
-.note{padding:0 18px 16px;color:var(--muted);font-size:13px}
-@media(max-width:600px){pre{padding:10px}code{font-size:12px}.head{align-items:flex-start}}
-</style>
-</head>
-<body>
-<header>
-<h1>Data Science Practical Codes</h1>
-<div class="sub">Three simple Python programs using Pandas DataFrames · Click Copy Code for any program.</div>
-<nav>
-<button onclick="document.getElementById('c1').scrollIntoView()">Code 1: Outliers</button>
-<button onclick="document.getElementById('c2').scrollIntoView()">Code 2: Salary Regression</button>
-<button onclick="document.getElementById('c3').scrollIntoView()">Code 3: Heart Disease</button>
-</nav>
-</header>
-<main>
-<section class="card" id="c1">
-<div class="head"><div><h2>Code 1: Vehicle Data — Boxplot and Outliers</h2><div class="desc">Creates a DataFrame, plots two boxplots, and finds outliers using IQR.</div></div></div>
-<div class="actions"><button class="copy" onclick="copyCode('code1',this)">Copy Code</button></div>
-<pre><code id="code1">import pandas as pd
-import matplotlib.pyplot as plt
-
-data = {
-    "Fuel_Efficiency": [25, 30, 28, 35, 32, 60],
-    "Engine_Power": [100, 120, 110, 130, 125, 400],
-    "Vehicle_Weight": [1200, 1350, 1280, 1500, 1450, 1600],
-    "Engine_Size": [1.2, 1.5, 1.4, 1.8, 1.6, 2.0],
-    "Acceleration": [12, 11, 10, 9, 10, 8]
+:root{color-scheme:dark;--bg:#0b1020;--panel:#141c2e;--line:#2c3852;--text:#eef3ff;--muted:#a7b5cc;--accent:#70e1ce}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Arial,sans-serif}.wrap{max-width:1100px;margin:auto;padding:26px 16px 60px}h1{margin:0 0 8px;font-size:clamp(26px,4vw,38px)}.intro{color:var(--muted);margin:0 0 20px}.toolbar{position:sticky;top:0;z-index:5;background:#0b1020ed;padding:12px 0;display:flex;gap:10px;flex-wrap:wrap}input{flex:1;min-width:180px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:12px;font-size:15px}button{background:var(--accent);color:#06251f;border:0;border-radius:8px;padding:9px 13px;font-weight:700;cursor:pointer}.slip{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin:18px 0;overflow:hidden}.head{padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line)}.tag{display:inline-block;background:#203d4a;color:#b9fff2;border-radius:30px;padding:4px 10px;font-weight:700}.hint{margin:6px 0 0;color:var(--muted);font-size:13px}pre{margin:0;padding:18px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 Consolas,'Courier New',monospace;color:#e8eefb}.hidden{display:none}.count{color:var(--muted);align-self:center}@media(max-width:600px){.wrap{padding:18px 10px 40px}pre{padding:13px;font-size:12px}.head{align-items:flex-start}}
+</style></head><body><main class="wrap"><h1>AI &amp; Machine Learning (AIML)</h1><p class="intro">Simplified AIML practical Python codes for quick revision. Output sections removed. Search by slip number or topic, then copy the slip.</p>
+<div class="toolbar"><input id="search" oninput="filterSlips()" placeholder="Search e.g. BFS, SVM, Slip 6..."/><span class="count" id="count"></span></div>
+<div id="slips"><section class="slip" data-slip="1"><div class="head"><div><span class="tag">SLIP 1</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_1
+Q1)       Write a program to implement Breadth First Search (BFS) for the    [10 marks]
+           Monkey Banana Problem.
+        from collections import deque
+        queue = deque(["Monkey at Door"])
+        visited = []
+        while queue:
+          state = queue.popleft()
+          if state not in visited:
+             visited.append(state)
+             print(state)
+             if state == "Monkey at Door":
+                queue.append("Monkey at Box")
+             elif state == "Monkey at Box":
+                queue.append("Box Under Banana")
+             elif state == "Box Under Banana":
+                queue.append("Monkey Climbs Box")
+             elif state == "Monkey Climbs Box":
+                queue.append("Monkey Gets Banana")
+             elif state == "Monkey Gets Banana":
+                print("\nGoal: Banana Obtained!")
+                break
+Q2)       Write a program to implement the A* Search Algorithm to find the   [20 marks]
+           shortest path between a source node and a destination node
+           .
+        from queue import PriorityQueue
+        graph = {
+          'A': [('B', 1), ('C', 4)],
+          'B': [('D', 2), ('E', 5)],
+          'C': [('F', 2)],
+          'D': [('G', 3)],
+          'E': [('G', 1)],
+          'F': [('G', 2)],
+          'G': []
+        }
+        heuristic = {
+          'A': 6,
+'B': 5,
+            'C': 4,
+            'D': 3,
+            'E': 2,
+            'F': 2,
+            'G': 0
+        }
+        def a_star(start, goal):
+            open_list = PriorityQueue()
+            closed = set()
+            g_cost = {start: 0}
+            parent = {start: None}
+            f_cost = g_cost[start] + heuristic[start]
+            open_list.put((f_cost, start))
+            found = False
+            while not open_list.empty():
+              current_f, current = open_list.get()
+              if current == goal:
+                 found = True
+                 break
+              if current in closed:
+                 continue
+              closed.add(current)
+              for neighbor, cost in graph[current]:
+                 new_g = g_cost[current] + cost
+                 if neighbor not in g_cost or new_g &lt; g_cost[neighbor]:
+                      g_cost[neighbor] = new_g
+                      new_f = new_g + heuristic[neighbor]
+                      parent[neighbor] = current
+open_list.put((new_f, neighbor))
+            if found:
+               path = []
+               node = goal
+               while node is not None:
+                 path.append(node)
+                 node = parent[node]
+               path.reverse()
+               print("Shortest Path:", " -&gt; ".join(path))
+               print("Minimum Cost:", g_cost[goal])
+            else:
+               print("No path found")</pre></section><section class="slip" data-slip="2"><div class="head"><div><span class="tag">SLIP 2</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_2
+Q1)      Write a program to solve the Water Jug Problem using BFS.               [10 marks]
+        from collections import deque
+        queue = deque(["Both Jugs Empty"])
+        visited = []
+        while queue:
+          state = queue.popleft()
+          if state not in visited:
+             visited.append(state)
+             print(state)
+             if state == "Both Jugs Empty":
+                queue.append("Fill 3-Litre Jug")
+             elif state == "Fill 3-Litre Jug":
+                queue.append("pour jug 3 liter into 4 liter")
+             elif state == "pour jug 3 liter into 4 liter":
+                queue.append("fill 3 liter jug again")
+             elif state == "fill 3 liter jug again":
+                queue.append("pour 3 liter into 4 liter")
+             elif state == "pour 3 liter into 4 liter":
+                queue.append("Get 2 Litre in 4 litre")
+              elif state == "Get 2 Litre in 4 litre":
+                  print("\nGoal: Required Water Obtained!")
+                  break
+Q2)      Write a program to implement the Backtracking Algorithm for solving a   [20 marks]
+          constraint satisfaction problem.
+        def is_safe(vertex, graph, color, c):
+for i in range(5):
+             if graph[vertex][i] == 1 and color[i] == c:
+                return False
+          return True
+        def graph_coloring(graph, color, vertex):
+          if vertex == 5:
+             return True
+          for c in range(1, 6):
+             if is_safe(vertex, graph, color, c):
+                color[vertex] = c
+                if graph_coloring(graph, color, vertex + 1):
+                   return True
+                color[vertex] = 0
+          return False
+        graph = [
+          [0, 1, 1, 1, 1],
+          [1, 0, 1, 1, 1],
+          [1, 1, 0, 1, 1],
+          [1, 1, 1, 0, 1],
+          [1, 1, 1, 1, 0]
+        ]
+        color = [0, 0, 0, 0, 0]
+        color_names = ["", "Blue", "Green", "Yellow", "Red", "Purple"]
+        if graph_coloring(graph, color, 0):
+          print("Graph Coloring Solution:")
+          for i in range(5):
+            print(i + 1, "-&gt;", color_names[color[i]])
+        else:
+           print("No solution exists.")
+        Graph Coloring Solution:
+        1 -&gt; Blue
+        2 -&gt; Green
+        3 -&gt; Yellow
+        4 -&gt; Red
+        5 -&gt; Purple</pre></section><section class="slip" data-slip="3"><div class="head"><div><span class="tag">SLIP 3</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_3
+Q1)        Write a program to implement BFS traversal for a graph.                              [10 marks]
+        from collections import deque
+        graph = {
+            1: [2, 3],
+            2: [4, 5],
+            3: [6, 7],
+            4: [8, 9],
+            5: [10, 11],
+            6: [12, 13],
+            7: [14, 15],
+            8: [],
+            9: [],
+            10: [],
+            11: [],
+            12: [],
+            13: [],
+            14: [],
+            15: []
+        }
+        start_node = 1
+        def bfs(graph, start):
+            visited = []
+            queue = deque([start])
+            visited.append(start)
+            while queue:
+              node = queue.popleft()
+              print(node, end=" ")
+              for neighbour in graph[node]:
+                 if neighbour not in visited:
+                    visited.append(neighbour)
+                    queue.append(neighbour)
+print("BFS Traversal:")
+        bfs(graph, start_node)
+Q2)      Write a program to implement Alpha-Beta Pruning for optimizing the                  [20 marks]
+          Minimax search process.
+        process.
+        import math
+        def alpha_beta(node, depth, alpha, beta, is_max, tree):
+          if depth == 0:
+             return node
+          if is_max:
+              value = -math.inf
+             for child in tree[node]:
+               value = max(value, alpha_beta(child, depth - 1, alpha, beta, False, tree))
+               alpha = max(alpha, value)
+               if alpha &gt;= beta:
+                  break
+             return value
+          else:
+             value = math.inf
+             for child in tree[node]:
+               value = min(value, alpha_beta(child, depth - 1, alpha, beta, True, tree))
+               beta = min(beta, value)
+               if alpha &gt;= beta:
+                  break
+             return value
+        tree = {
+"Root": ["A", "B", "C"],
+             "A": [3, 5],
+             "B": [2, 9],
+             "C": [0, 7]
+         }
+         best_score = alpha_beta( "Root",
+           2,
+           -math.inf,
+           math.inf,
+           True,
+           tree
+         )
+         print("Leaf Node Values:", [3, 5, 2, 9, 0, 7])
+         print("Optimal value selected by Alpha-Beta Pruning:", best_score)</pre></section><section class="slip" data-slip="4"><div class="head"><div><span class="tag">SLIP 4</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_4
+Q1)       Write a program to solve a state-space search problem using BFS.   [10 marks]
+           Start Vertex = A
+         from collections import deque
+         def bfs(graph, start):
+           queue = deque([start])
+           visited = []
+           while queue:
+              node = queue.popleft()
+              if node not in visited:
+                visited.append(node)
+                print(node, end=" ")
+                for neighbour in graph[node]:
+                   if neighbour not in visited:
+                      queue.append(neighbour)
+         graph = {
+            'A': ['B', 'C'],
+            'B': ['A', 'D'],
+            'C': ['A', 'E'],
+            'D': ['B', 'E'],
+            'E': ['C', 'D']
+         }
+         start = 'A'
+         print("BFS Traversal:")
+         bfs(graph, start)
+Q2)       Write a program to implement Predicate Logic using predicates,   [20 marks]
+           variables, and quantifier.
+         cats = ["Tom", "Kitty"]
+         def is_cat(animal):
+           return animal in cats
+         def is_animal(animal):
+           return is_cat(animal)
+         name = "Tom"
+         print("Name:", name)
+         if is_cat(name):
+             print(name, "is a Cat.")
+         if is_animal(name):
+             print(name, "is an Animal.")
+         else:
+             print(name, "is not found.")
+         print("\nAll Cats:")
+         for cat in cats:
+           if is_animal(cat):
+              print(cat, "is an Animal.")</pre></section><section class="slip" data-slip="5"><div class="head"><div><span class="tag">SLIP 5</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_5
+Q1)        Write a program to implement Depth Limited Search (DLS).   [10 marks]
+         def dls(graph, node, goal, limit, path):
+           path.append(node)
+           if node == goal:
+              return path
+           if limit == 0:
+              path.pop()
+               return None
+           for neighbour in graph[node]:
+              result = dls(graph, neighbour, goal, limit - 1, path)
+              if result:
+                 return result
+           path.pop()
+           return None
+         graph = {
+           'A': ['B', 'C'],
+           'B': ['D', 'E'],
+           'C': ['F'],
+           'D': [],
+           'E': [],
+           'F': []
+         }
+         start = 'A'
+         goal = 'F'
+         depth_limit = 2
+         result = dls(graph, start, goal, depth_limit, [])
+         if result:
+            print("Path Found :", " -&gt; ".join(result))
+         else:
+            print("Goal State Not Found Within Depth Limit.")
+Q2)        Write a program to implement Bernoulli NB classifier with 2 classes on [20 marks]
+            numeric data, use make_classification to create a dataset X of 300 sample
+            points in 2D space with the following parameters :
+            n_features=2, n_informative=2, n_redundant=0, n_classes=2.
+            For testing (Prediction), use the following values to test the Bernoulli NB
+            Classifier.
+            Input (Values) : [[0, 0], [0, 1], [1, 0], [1, 1]]
+            Output          : [0, 1, 0, 1]
+         from sklearn.datasets import make_classification
+         from sklearn.naive_bayes import BernoulliNB
+         X, y = make_classification(
+           n_samples=300,
+           n_features=2,
+           n_informative=2,
+           n_redundant=0,
+           n_classes=2,
+           random_state=0
+         )
+         model = BernoulliNB()
+         model.fit(X, y)
+         test_data = [
+            [0, 0],
+            [0, 1],
+            [1, 0],
+            [1, 1]
+         ]
+         prediction = model.predict(test_data)
+         print("Input:", test_data)
+         print("Output:", prediction)</pre></section><section class="slip" data-slip="6"><div class="head"><div><span class="tag">SLIP 6</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_6
+Q1)       Write a program to implement DFS traversal for a graph.            [10 marks]
+         def dfs(graph, node, visited):
+           visited.append(node)
+           print(node, end=" ")
+           for neighbour in graph[node]:
+             if neighbour not in visited:
+                dfs(graph, neighbour, visited)
+         graph = {
+           'A': ['B', 'E', 'C'],
+           'B': ['A', 'D'],
+           'C': ['A', 'F'],
+           'D': ['B', 'E'],
+           'E': ['A', 'D', 'F'],
+           'F': ['C', 'E']
+         }
+         visited = []
+         start = 'A'
+         print("DFS Traversal:")
+         dfs(graph, start, visited)
+Q2)       Write a program to implement a Non-Linear Support Vector Machine   [20 marks]
+           (SVM) using the Radial Basis Function (RBF) Kernel.
+           Input Data :
+                  X = [ [1, 2], [2, 3],[5, 5] ]
+           Class Labels :
+                  y = [0, 0, 1]
+           Test Input : [4, 4]
+         import sys
+         import subprocess
+subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])</pre></section><section class="slip" data-slip="7"><div class="head"><div><span class="tag">SLIP 7</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_7
+Q1)        Write a program to implement the A* Search Algorithm to find the   [10 marks]
+            shortest path between a source node and a destination node.
+            Source = V1
+            Destination = V6
+         from queue import PriorityQueue
+         graph = {
+           'V1': [('V2', 2), ('V3', 4)],
+           'V2': [('V1', 2), ('V4', 3)],
+           'V3': [('V1', 4), ('V4', 1), ('V5', 5)],
+           'V4': [('V2', 3), ('V3', 1), ('V6', 2)],
+           'V5': [('V3', 5), ('V6', 1)],
+           'V6': []
+         }
+         heuristic = {
+           'V1': 0,
+           'V2': 0,
+           'V3': 0,
+           'V4': 0,
+           'V5': 0,
+           'V6': 0
+         }
+         def a_star(start, goal):
+           open_list = PriorityQueue()
+           closed = set()
+           g_cost = {start: 0}
+           parent = {start: None}
+           f_cost = g_cost[start] + heuristic[start]
+           open_list.put((f_cost, start))
+           found = False
+while not open_list.empty():
+              current_f, current = open_list.get()
+              if current == goal:
+                 found = True
+                 break
+              if current in closed:
+                 continue
+              closed.add(current)
+              for neighbor, cost in graph[current]:
+                new_g = g_cost[current] + cost
+                if neighbor not in g_cost or new_g &lt; g_cost[neighbor]:
+                   g_cost[neighbor] = new_g
+                   new_f = new_g + heuristic[neighbor]
+                   parent[neighbor] = current
+                   open_list.put((new_f, neighbor))
+           if found:
+              path = []
+              node = goal
+              while node is not None:
+                path.append(node)
+                node = parent[node]
+              path.reverse()
+              print("Shortest Path:", " -&gt; ".join(path))
+              print("Minimum Cost:", g_cost[goal])
+           else:
+              print("No path found")
+         source = input("Enter source node: ")
+         destination = input("Enter destination node: ")
+         a_star(source, destination)
+Ouput:
+         Shortest Path: V1 -&gt; V2 -&gt; V4 -&gt; V6
+         Minimum Cost: 7
+Q2)       Write a program to solve the Map Coloring Problem using the Constraint   [20 marks]
+           Satisfaction Problem (CSP) approach.
+         def is_safe(vertex, graph, color, c):
+           for i in range(5):
+             if graph[vertex][i] == 1 and color[i] == c:
+                 return False
+           return True
+         def graph_coloring(graph, color, vertex):
+           if vertex == 5:
+              return True
+           for c in range(1, 4):
+              if is_safe(vertex, graph, color, c):
+                color[vertex] = c
+                if graph_coloring(graph, color, vertex + 1):
+                   return True
+                color[vertex] = 0
+           return False
+         graph = [
+[0, 1, 1, 0, 0],
+             [1, 0, 0, 1, 0],
+             [1, 0, 0, 0, 1],
+             [0, 1, 0, 0, 1],
+             [0, 0, 1, 1, 0]
+         ]
+         m=3
+         color = [0, 0, 0, 0, 0]
+         color_names = ["", "Pink", "Brown", "Orange"]
+         if graph_coloring(graph, color, 0):
+             print("Map Coloring Solution:")
+             for i in range(5):
+               print(i + 1, "-&gt;", color_names[color[i]])
+         else:
+            print("No solution exists with", m, "colors.")</pre></section><section class="slip" data-slip="8"><div class="head"><div><span class="tag">SLIP 8</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_8
+Q1)       Write a program to solve the 4-Puzzle Problem using the A* Search         [10 marks]
+           Algorithm.
+         from queue import PriorityQueue
+         def heuristic(state, goal):
+           count = 0
+           for i in range(4):
+             if state[i] != 0 and state[i] != goal[i]:
+                count += 1
+           return count
+         def display(state):
+           print(state[0], state[1])
+           print(state[2], state[3])
+           print()
+         def get_neighbors(state):
+           neighbors = []
+           zero = state.index(0)
+           moves = []
+           if zero &gt;= 2:
+              moves.append(zero - 2)
+           if zero &lt; 2:
+              moves.append(zero + 2)
+           if zero % 2 != 0:
+              moves.append(zero - 1)
+           if zero % 2 != 1:
+              moves.append(zero + 1)
+           for move in moves:
+              new_state = list(state)
+              new_state[zero], new_state[move] = \
+                 new_state[move], new_state[zero]
+              neighbors.append(tuple(new_state))
+           return neighbors
+         def AStar(start, goal):
+           OPEN = PriorityQueue()
+           CLOSED = set()
+           g_cost = {start: 0}
+           parent = {start: None}
+           f = g_cost[start] + heuristic(start, goal)
+           OPEN.put((f, start))
+           while not OPEN.empty():
+              f, current = OPEN.get()
+              if current == goal:
+                 break
+              if current in CLOSED:
+                 continue
+              CLOSED.add(current)
+              for neighbor in get_neighbors(current):
+                if neighbor in CLOSED:
+                   continue
+                new_g = g_cost[current] + 1
+                if neighbor not in g_cost or new_g &lt; g_cost[neighbor]:
+                   g_cost[neighbor] = new_g
+                   h = heuristic(neighbor, goal)
+f = new_g + h
+                     parent[neighbor] = current
+                     OPEN.put((f, neighbor))
+           if goal in g_cost:
+              path = []
+              node = goal
+              while node is not None:
+                   path.append(node)
+                   node = parent[node]
+              path.reverse()
+              print("Solution Found!")
+              print("Number of moves:", len(path) - 1)
+              for i, state in enumerate(path):
+                   print("Step", i)
+                   display(state)
+           else:
+              print("No solution found")
+         start = (
+            1, 2,
+            0, 3
+         )
+         goal = (
+           1, 2,
+           3, 0
+         )
+         AStar(start, goal)
+Q2)       Write a program or report that compares Minimax and Alpha-Beta             [20 marks]
+           Pruning on the same game tree.
+         import math
+         def minimax(depth, node_index, is_max, values, max_depth):
+           if depth == max_depth:
+              return values[node_index]
+           if is_max:
+              left = minimax(
+                 depth + 1,
+                 node_index * 2,
+                 False,
+                 values,
+                 max_depth
+              )
+              right = minimax(
+                 depth + 1,
+                 node_index * 2 + 1,
+                 False,
+                 values,
+                 max_depth
+              )
+              return max(left, right)
+           else:
+              left = minimax(
+                 depth + 1,
+                 node_index * 2,
+                 True,
+                 values,
+                 max_depth
+              )
+              right = minimax(
+                 depth + 1,
+                 node_index * 2 + 1,
+                 True,
+                 values,
+                 max_depth
+              )
+              return min(left, right)
+         def alpha_beta(depth, node_index, is_max, values, max_depth, alpha, beta):
+if depth == max_depth:
+            return values[node_index]
+         if is_max:
+           left = alpha_beta(
+              depth + 1,
+              node_index * 2,
+              False,
+              values,
+              max_depth,
+              alpha,
+              beta
+           )
+           value = left
+           alpha = max(alpha, value)
+           if alpha &gt;= beta:
+              return value
+           right = alpha_beta(
+              depth + 1,
+              node_index * 2 + 1,
+              False,
+              values,
+              max_depth,
+              alpha,
+              beta
+           )
+           value = max(value, right)
+           alpha = max(alpha, value)
+           return value
+         else:
+           left = alpha_beta(
+              depth + 1,
+              node_index * 2,
+              True,
+              values,
+              max_depth,
+              alpha,
+              beta
+           )
+           value = left
+           beta = min(beta, value)
+           if alpha &gt;= beta:
+              return value
+           right = alpha_beta(
+              depth + 1,
+              node_index * 2 + 1,
+              True,
+              values,
+              max_depth,
+              alpha,
+              beta
+           )
+value = min(value, right)
+              beta = min(beta, value)
+              return value
+         leaf_values = [3, 5, 2, 9, 12, 5, 23, 23]
+         tree_depth = int(math.log2(len(leaf_values)))
+         minimax_score = minimax(
+           depth=0,
+           node_index=0,
+           is_max=True,
+           values=leaf_values,
+           max_depth=tree_depth
+         )
+         alpha_beta_score = alpha_beta(
+            depth=0,
+            node_index=0,
+            is_max=True,
+            values=leaf_values,
+            max_depth=tree_depth,
+            alpha=-math.inf,
+            beta=math.inf
+         )
+         print("Leaf Node Values:", leaf_values)
+         print("Optimal value using Minimax:", minimax_score)
+         print("Optimal value using Alpha-Beta Pruning:", alpha_beta_score)
+         if minimax_score == alpha_beta_score:
+            print("Both algorithms give the same optimal value.")</pre></section><section class="slip" data-slip="9"><div class="head"><div><span class="tag">SLIP 9</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_9
+Q1)       Write a program to demonstrate the Hill Climbing Algorithm for finding the maximum value of a
+            simple objective function.
+heuristic = {
+  'A': 15,
+  'B': 25,
+  'D': 30,
+  'C': 35,
+  'E': 50
 }
-
-df = pd.DataFrame(data)
-print("Vehicle Dataset:")
-print(df)
-
-plt.subplot(1, 2, 1)
-plt.boxplot(df["Fuel_Efficiency"])
-plt.title("Fuel Efficiency")
-
-plt.subplot(1, 2, 2)
-plt.boxplot(df["Engine_Power"])
-plt.title("Engine Power")
-
-plt.tight_layout()
-plt.show()
-
-def find_outliers(column):
-    Q1 = df[column].quantile(0.25)
-    Q3 = df[column].quantile(0.75)
-    IQR = Q3 - Q1
-    lower = Q1 - 1.5 * IQR
-    upper = Q3 + 1.5 * IQR
-    return df[(df[column] < lower) | (df[column] > upper)][column]
-
-print("Fuel Efficiency Outliers:")
-print(find_outliers("Fuel_Efficiency"))
-
-print("Engine Power Outliers:")
-print(find_outliers("Engine_Power"))</code></pre>
-<div class="note">Uses a DataFrame created directly in the program; no CSV file is required.</div>
-</section>
-
-<section class="card" id="c2">
-<div class="head"><div><h2>Code 2: Salary Prediction — Simple Linear Regression</h2><div class="desc">Creates a DataFrame, trains a model, calculates MSE, and plots the regression line.</div></div></div>
-<div class="actions"><button class="copy" onclick="copyCode('code2',this)">Copy Code</button></div>
-<pre><code id="code2">import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-
-data = {
-    "YearsExperience": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    "Salary": [25000, 30000, 35000, 40000, 45000,
-               50000, 55000, 60000, 65000, 70000]
+graph = {
+  'A': ['B', 'D'],
+  'B': ['A', 'C', 'E'],
+  'D': ['A', 'C'],
+  'C': ['D', 'B', 'E'],
+  'E': ['C', 'B']
 }
-
-df = pd.DataFrame(data)
-print("Salary Dataset:")
-print(df)
-
-print("\\nDataset Information:")
-df.info()
-
-X = df[["YearsExperience"]]
-y = df["Salary"]
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
-model = LinearRegression()
-model.fit(X_train, y_train)
-
-y_pred = model.predict(X_test)
-
-print("Mean Squared Error:")
-print(mean_squared_error(y_test, y_pred))
-
-plt.scatter(X, y)
-plt.plot(X, model.predict(X), color="red")
-plt.xlabel("Years Experience")
-plt.ylabel("Salary")
-plt.title("Salary Prediction")
-plt.show()</code></pre>
-<div class="note">Uses sample salary data in a DataFrame; no CSV file is required. Install needed packages with <code>%pip install pandas matplotlib scikit-learn</code>.</div>
-</section>
-
-<section class="card" id="c3">
-<div class="head"><div><h2>Code 3: Heart Disease — Random Forest Classifier</h2><div class="desc">Creates a Heart Disease DataFrame, trains Random Forest, and prints accuracy and confusion matrix.</div></div></div>
-<div class="actions"><button class="copy" onclick="copyCode('code3',this)">Copy Code</button></div>
-<pre><code id="code3">import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
+def hill_climbing(start):
+   current = start
+   path = [current]
+   while True:
+      neighbors = graph[current]
+      best_neighbor = max(
+         neighbors,
+         key=lambda x: heuristic[x]
+      )
+      if heuristic[best_neighbor] &lt;= heuristic[current]:
+         break
+      current = best_neighbor
+      path.append(current)
+   return path, heuristic[current]
+start = 'A'
+path, maximum_value = hill_climbing(start)
+print("Starting State:", start)
+print("Path:", " -&gt; ".join(path))
+print("Maximum State:", path[-1])
+print("Maximum Value:", maximum_value)
+Q2)      Write a program to implement the Forward Chaining inference mechanism.   [20 marks]
+facts = ["Ravi is a Student"]
+rules = [
+   ("Ravi is a Student", "Ravi studies AI"),
+   ("Ravi studies AI", "Ravi learns Machine Learning"),
+   ("Ravi learns Machine Learning", "Ravi can get a Job")
+]
+goal = "Ravi can get a Job"
+print("Initial Facts:", facts)
+while True:
+  rule_fired = False
+  for condition, conclusion in rules:
+     if condition in facts and conclusion not in facts:
+         facts.append(conclusion)
+print("New Fact:", conclusion)
+         rule_fired = True
+         if conclusion == goal:
+            break
+  if goal in facts:
+     break
+  if rule_fired == False:
+     break
+print("\nFinal Facts:", facts)
+if goal in facts:
+   print("Goal Reached:", goal)
+else:
+   print("Goal Not Reached")</pre></section><section class="slip" data-slip="10"><div class="head"><div><span class="tag">SLIP 10</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_10
+Q1)       Write a program to implement Means-End Analysis for solving a goal-based problem
+rooms = {
+  'A': ['B'],
+  'B': ['C'],
+  'C': ['D'],
+  'D': []
+}
+def means_end_analysis(start, goal):
+  current_state = start
+  print("MEANS-END ANALYSIS")
+  print("Robot starts from Room", start)
+  print("Goal is Room", goal)
+  print()
+  while current_state != goal:
+    difference = ord(goal) - ord(current_state)
+    print("Current State:", current_state)
+    print("Goal State:", goal)
+    print("Difference:", difference, "room(s) away")
+    next_room = rooms[current_state][0]
+    print("Action: Move to next adjacent room")
+    current_state = next_room
+    print("New State:", current_state)
+    print()
+  print("Current State:", current_state)
+  print("Goal State:", goal)
+  print("Difference: 0 (No difference)")
+  print("Action: Stop")
+  print("Goal Reached!")
+  print()
+  print("Path Found: Room A -&gt; Room B -&gt; Room C -&gt; Room D")
+Q2)       Write a program to implement the Random Forest Classifier for classification tasks.
+            dataset = { 'Study_Hours': [2, 3, 4, 5, 6, 7, 1, 2, 5, 8],
+                        'Attendance': [60, 65, 70, 75, 80, 85, 55, 62, 78, 90],
+                        'Assignment_Score': [55, 60, 65, 70, 75, 80, 50, 58, 72, 85],
+                        'Result': ['Fail', 'Fail', 'Pass', 'Pass', 'Pass',
+                         'Pass', 'Fail', 'Fail', 'Pass', 'Pass'] }
+Cell-1:
+import sys
+print(sys.executable)
+Cell-2:
+%pip install pandas scikit-learn
+Cell-3:
+import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
-
-data = {
-    "Age": [63, 37, 41, 56, 57, 57, 56, 44, 52, 57, 54, 48, 49, 64, 58, 50, 58, 66, 43, 69],
-    "Sex": [1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1],
-    "ChestPain": [3, 2, 1, 1, 0, 0, 1, 2, 3, 0, 2, 1, 1, 3, 3, 2, 2, 0, 2, 1],
-    "RestBP": [145, 130, 130, 120, 120, 140, 140, 120, 172, 150, 140, 130, 130, 110, 150, 120, 132, 160, 150, 140],
-    "Cholesterol": [233, 250, 204, 236, 354, 192, 294, 263, 199, 168, 239, 275, 266, 211, 283, 219, 224, 246, 247, 239],
-    "MaxHR": [150, 187, 172, 178, 163, 148, 153, 173, 162, 174, 160, 139, 171, 144, 162, 158, 173, 150, 171, 151],
-    "Oldpeak": [2.3, 3.5, 1.4, 0.8, 0.6, 0.4, 1.3, 0, 0.5, 1.6, 1.2, 0.2, 0.6, 1.8, 1, 1.6, 3.2, 0, 1.5, 1.8],
-    "Target": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
-}
-
-df = pd.DataFrame(data)
-
-print("Heart Disease Dataset:")
-print(df.head())
-
-print("\\nDataset Information:")
-df.info()
-
-df = df.dropna()
-
-X = df.drop("Target", axis=1)
-y = df["Target"]
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
+print("Installation successful")</pre></section><section class="slip" data-slip="11"><div class="head"><div><span class="tag">SLIP 11</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_11
+Q1)          Write a program or report that compares Minimax and Alpha-Beta Pruning on the same
+               game tree.
+import math
+def minimax(depth, node_index, is_max, values, max_depth):
+  if depth == max_depth:
+     return values[node_index]
+  if is_max:
+     left = minimax(
+        depth + 1,
+        node_index * 2,
+        False,
+        values,
+        max_depth
+     )
+     right = minimax(
+        depth + 1,
+        node_index * 2 + 1,
+        False,
+        values,
+        max_depth
+     )
+     return max(left, right)
+  else:
+     left = minimax(
+        depth + 1,
+        node_index * 2,
+        True,
+        values,
+        max_depth
+     )
+     right = minimax(
+        depth + 1,
+        node_index * 2 + 1,
+        True,
+        values,
+        max_depth
+     )
+     return min(left, right)
+def alpha_beta(depth, node_index, is_max, values, max_depth, alpha, beta):
+  if depth == max_depth:
+return values[node_index]
+ if is_max:
+    left = alpha_beta(
+       depth + 1,
+       node_index * 2,
+       False,
+       values,
+       max_depth,
+       alpha,
+       beta
+    )
+    value = left
+    alpha = max(alpha, value)
+    if alpha &gt;= beta:
+       return value
+    right = alpha_beta(
+       depth + 1,
+       node_index * 2 + 1,
+       False,
+       values,
+       max_depth,
+       alpha,
+       beta
+    )
+    value = max(value, right)
+    alpha = max(alpha, value)
+    return value
+ else:
+    left = alpha_beta(
+       depth + 1,
+       node_index * 2,
+       True,
+       values,
+       max_depth,
+       alpha,
+       beta
+    )
+    value = left
+    beta = min(beta, value)
+    if alpha &gt;= beta:
+       return value
+    right = alpha_beta(
+       depth + 1,
+       node_index * 2 + 1,
+       True,
+       values,
+       max_depth,
+       alpha,
+       beta
+    )
+    value = min(value, right)
+beta = min(beta, value)
+     return value
+leaf_values = [3, 5, 2, 9, 12, 5, 23, 23]
+tree_depth = int(math.log2(len(leaf_values)))
+minimax_score = minimax(
+  depth=0,
+  node_index=0,
+  is_max=True,
+  values=leaf_values,
+  max_depth=tree_depth
 )
-
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
-
-y_pred = model.predict(X_test)
-
-print("\\nAccuracy:", accuracy_score(y_test, y_pred))
-
-cm = confusion_matrix(y_test, y_pred)
-print("\\nConfusion Matrix:")
-print(cm)
-
-disp = ConfusionMatrixDisplay(
-    confusion_matrix=cm,
-    display_labels=["No Disease", "Disease"]
+alpha_beta_score = alpha_beta(
+   depth=0,
+   node_index=0,
+   is_max=True,
+   values=leaf_values,
+   max_depth=tree_depth,
+   alpha=-math.inf,
+   beta=math.inf
 )
-disp.plot()
-plt.title("Random Forest - Heart Disease")
-plt.show()</code></pre>
-<div class="note">Uses a small sample dataset entered directly as a DataFrame, not a full clinical dataset. The results are only for practice and must not be used for medical decisions. Install packages with <code>%pip install pandas matplotlib scikit-learn</code>.</div>
-</section>
-</main>
+print("Leaf Node Values:", leaf_values)
+print("Optimal value using Minimax:", minimax_score)
+print("Optimal value using Alpha-Beta Pruning:", alpha_beta_score)
+if minimax_score == alpha_beta_score:
+   print("Both algorithms give the same optimal value.")
+Q2)       Write a program to implement the Backward Chaining inference mechanism.   [20 marks]
+temperature = float(input("Enter body temperature (°C): "))
+cough = input("Does the patient have a cough? (yes/no): ").lower()
+if temperature &gt; 38:
+    fever = True
+else:
+    fever = False
+goal = "Flu"
+if goal == "Flu":
+  if fever:
+     if cough == "yes":
+        result = "Patient has Flu"
+     else:
+        result = "Flu cannot be proved because patient has no cough."
+  else:
+     result = "Flu cannot be proved because patient has no fever."
+print("\n--- Backward Chaining Result ---")
+print("Goal:", goal)
+print("Fever:", fever)
+print("Cough:", cough)
+print("Result:", result)</pre></section><section class="slip" data-slip="12"><div class="head"><div><span class="tag">SLIP 12</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_12
+Q1)        Write a program to implement Breadth First Search (BFS) for the            [10 marks]
+            Monkey Banana Problem.
+         from collections import deque
+         queue = deque(["Monkey at Door"])
+         visited = []
+         while queue:
+           state = queue.popleft()
+           if state not in visited:
+              visited.append(state)
+              print(state)
+              if state == "Monkey at Door":
+                 queue.append("Monkey at Box")
+              elif state == "Monkey at Box":
+                 queue.append("Box Under Banana")
+              elif state == "Box Under Banana":
+                 queue.append("Monkey Climbs Box")
+              elif state == "Monkey Climbs Box":
+                 queue.append("Monkey Gets Banana")
+              elif state == "Monkey Gets Banana":
+                 print("\nGoal: Banana Obtained!")
+                 break
+Q2)        Write a program or report to compare Linear SVM and Non-Linear SVM         [20 marks]
+            (RBF Kernel).
+              X = [ [1, 2], [2, 3], [3, 1], [4, 2], [5, 5], [6, 6], [7, 4], [8, 5] ]
+              Y = [0, 0, 0, 0, 1, 1, 1, 1]
+         from sklearn import svm
+         import matplotlib.pyplot as plt
+         import numpy as np
+         X=[
+            [1, 2],
+            [2, 3],
+            [3, 1],
+            [4, 2],
+            [5, 5],
+            [6, 6],
+            [7, 4],
+            [8, 5]
+         ]
+         Y = [0, 0, 0, 0, 1, 1, 1, 1]
+         test_data = [[6, 5]]
+         linear_model = svm.SVC(kernel='linear')
+         linear_model.fit(X, Y)
+         linear_prediction = linear_model.predict(test_data)
+         print("Linear SVM Prediction:", linear_prediction[0])
+         rbf_model = svm.SVC(kernel='rbf')
+         rbf_model.fit(X, Y)
+         rbf_prediction = rbf_model.predict(test_data)
+         print("RBF SVM Prediction:", rbf_prediction[0])
+         X = np.array(X)
+         Y = np.array(Y)
+         plt.figure(figsize=(12, 5))
+         plt.subplot(1, 2, 1)
+         plt.scatter(X[Y == 0, 0], X[Y == 0, 1], label="Class 0")
+         plt.scatter(X[Y == 1, 0], X[Y == 1, 1], label="Class 1")
+         w = linear_model.coef_[0]
+         b = linear_model.intercept_[0]
+         x_line = np.linspace(0, 9, 100)
+         y_line = -(w[0] * x_line + b) / w[1]
+         plt.plot(x_line, y_line, label="Decision Boundary")
+         plt.scatter(
+            test_data[0][0],
+            test_data[0][1],
+            marker="*",
+            s=200,
+            label="Test Point"
+         )
+         plt.title("Linear SVM")
+         plt.xlabel("X1")
+         plt.ylabel("X2")
+         plt.legend()
+         plt.grid(True)
+         plt.subplot(1, 2, 2)
+         plt.scatter(X[Y == 0, 0], X[Y == 0, 1], label="Class 0")
+         plt.scatter(X[Y == 1, 0], X[Y == 1, 1], label="Class 1")
+         xx, yy = np.meshgrid(
+           np.linspace(0, 9, 300),
+           np.linspace(0, 7, 300)
+         )
+         grid = np.c_[xx.ravel(), yy.ravel()]
+         Z = rbf_model.predict(grid)
+         Z = Z.reshape(xx.shape)
+         plt.contour(xx, yy, Z, levels=[0.5])
+         plt.scatter(
+            test_data[0][0],
+            test_data[0][1],
+            marker="*",
+            s=200,
+            label="Test Point"
+         )
+         plt.title("Non-Linear SVM (RBF Kernel)")
+         plt.xlabel("X1")
+         plt.ylabel("X2")
+         plt.legend()
+         plt.grid(True)
+         plt.tight_layout()
+         plt.show()</pre></section><section class="slip" data-slip="13"><div class="head"><div><span class="tag">SLIP 13</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_13
+Q1)        Write a program to solve the Water Jug Problem using BFS.                [10 marks]
+         from collections import deque
+         queue = deque(["Both Jugs Empty"])
+         visited = []
+         while queue:
+           state = queue.popleft()
+           if state not in visited:
+              visited.append(state)
+              print(state)
+              if state == "Both Jugs Empty":
+                 queue.append("Fill 3-Litre Jug")
+              elif state == "Fill 3-Litre Jug":
+                 queue.append("pour jug 3 liter into 4 liter")
+              elif state == "pour jug 3 liter into 4 liter":
+                 queue.append("fill 3 liter jug again")
+              elif state == "fill 3 liter jug again":
+                 queue.append("pour 3 liter into 4 liter")
+              elif state == "pour 3 liter into 4 liter":
+                 queue.append("Get 2 Litre in 4 litre")
+              elif state == "Get 2 Litre in 4 litre":
+                 print("\nGoal: Required Water Obtained!")
+                 break
+Q2)        Write a program to implement a Voting Classifier by combining multiple   [20 marks]
+            machine learning models such as Logistic Regression and Decision Tree.
+         from sklearn.linear_model import LogisticRegression
+         from sklearn.tree import DecisionTreeClassifier
+         from sklearn.ensemble import VotingClassifier
+         X=[
+          [1, 1],
+[1, 0],
+             [0, 1],
+             [0, 0]
+         ]
+         y = [1, 0, 0, 0]
+         logistic_model = LogisticRegression()
+         tree_model = DecisionTreeClassifier(random_state=42)
+         model = VotingClassifier(
+           estimators=[
+              ('logistic', logistic_model),
+              ('tree', tree_model)
+           ],
+           voting='soft'
+         )
+         model.fit(X, y)
+         test_data = [[1, 1]]
+         prediction = model.predict(test_data)
+         if prediction[0] == 1:
+            print("Loan Approved")
+         else:
+            print("Loan Rejected")
+         Loan Approved</pre></section><section class="slip" data-slip="14"><div class="head"><div><span class="tag">SLIP 14</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_14
+Q1)         Write a program to implement BFS traversal for a graph.                              [10 marks]
+         from collections import deque
+         graph = {
+             1: [2, 3, 5],
+             2: [1, 4],
+             3: [1, 6],
+             4: [2, 5],
+             5: [1, 4, 6],
+             6: [3, 5]
+         }
+         start_node = 1
+         def bfs(graph, start):
+             visited = []
+             queue = deque([start])
+             visited.append(start)
+             while queue:
+               node = queue.popleft()
+               print(node, end=" ")
+               for neighbour in graph[node]:
+                  if neighbour not in visited:
+                     visited.append(neighbour)
+                     queue.append(neighbour)
+         print("BFS Traversal:")
+         bfs(graph, start_node)
+Q2)        Write a program or report to compare Supervised Learning and      [20 marks]
+            Unsupervised Learning techniques.
+         from sklearn.tree import DecisionTreeClassifier
+         from sklearn.cluster import KMeans
+         import matplotlib.pyplot as plt
+         X=[
+           [180, 1],
+           [165, 1],
+           [95, 0],
+           [100, 0]
+         ]
+         y = [1, 0, 0, 1]
+         model = DecisionTreeClassifier(random_state=42)
+         model.fit(X, y)
+         new_patient = [[175, 1]]
+         prediction = model.predict(new_patient)
+         print("SUPERVISED LEARNING")
+         if prediction[0] == 1:
+            print("Prediction: Diabetes")
+         else:
+            print("Prediction: No Diabetes")
+         data = [
+           [180, 1],
+           [165, 1],
+           [95, 0],
+           [100, 0]
+         ]
+         kmeans = KMeans(n_clusters=2, random_state=42, n_init=10)
+         kmeans.fit(data)
+         print("\nUNSUPERVISED LEARNING")
+         print("Cluster Labels:", kmeans.labels_)
+         print("Cluster Centers:")
+         print(kmeans.cluster_centers_)
+         cluster_0 = []
+         cluster_1 = []
+         for i in range(len(data)):
+           if kmeans.labels_[i] == 0:
+              cluster_0.append(data[i])
+           else:
+              cluster_1.append(data[i])
+         plt.scatter(
+            [x[0] for x in cluster_0],
+            [x[1] for x in cluster_0],
+            label="Cluster 0"
+         )
+         plt.scatter(
+            [x[0] for x in cluster_1],
+            [x[1] for x in cluster_1],
+            label="Cluster 1"
+         )
+         plt.scatter(
+            kmeans.cluster_centers_[:, 0],
+            kmeans.cluster_centers_[:, 1],
+            marker="X",
+            s=200,
+            label="Cluster Centers"
+         )
+         plt.xlabel("Blood Sugar")
+         plt.ylabel("Frequent Urination")
+         plt.title("Unsupervised Learning using K-Means")
+         plt.legend()
+         plt.grid(True)
+         plt.show()</pre></section><section class="slip" data-slip="16"><div class="head"><div><span class="tag">SLIP 16</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_16
+Q1)       Write a program to implement Depth Limited Search (DLS).   [10 marks]
+         def dls(graph, node, limit, path):
+           path.append(node)
+           if limit == 0:
+               return
+           for neighbour in graph[node]:
+              dls(graph, neighbour, limit - 1, path)
+         graph = {
+           1: [2, 3],
+           2: [4, 5],
+           3: [6],
+           4: [],
+           5: [],
+           6: []
+         }
+         start = 1
+         depth_limit = 2
+         path = []
+         dls(graph, start, depth_limit, path)
+         print("Depth Limited Search Path:")
+print(" -&gt; ".join(map(str, path)))
+Q2)       Write a program to implement the Backward Chaining inference          [20 marks]
+           mechanism.
+         temperature = float(input("Enter body temperature (°C): "))
+         cough = input("Does the patient have a cough? (yes/no): ").lower()
+         if temperature &gt; 38:
+             fever = True
+         else:
+             fever = False
+         goal = "Flu"
+         if goal == "Flu":
+           if fever:
+              if cough == "yes":
+                 result = "Patient has Flu"
+              else:
+                 result = "Flu cannot be proved because patient has no cough."
+           else:
+              result = "Flu cannot be proved because patient has no fever."
+         print("\n--- Backward Chaining Result ---")
+         print("Goal:", goal)
+         print("Fever:", fever)
+         print("Cough:", cough)
+         print("Result:", result)
+         --- Backward Chaining Result ---
+         Goal: Flu
+         Fever: False
+         Cough: no
+         Result: Flu cannot be proved because patient has no fever.</pre></section><section class="slip" data-slip="20"><div class="head"><div><span class="tag">SLIP 20</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_20
+Q1)        Write a program to demonstrate the Hill Climbing Algorithm for   [10 marks]
+            finding the maximum value of a simple objective function.
+         heuristic = {
+           'A': 15,
+           'B': 25,
+           'D': 30,
+           'C': 35,
+           'E': 50
+         }
+         graph = {
+           'A': ['B', 'D'],
+           'B': ['A', 'C', 'E'],
+           'D': ['A', 'C'],
+           'C': ['D', 'B', 'E'],
+           'E': ['C', 'B']
+         }
+         def hill_climbing(start):
+            current = start
+            path = [current]
+            while True:
+               neighbors = graph[current]
+               best_neighbor = max(
+                  neighbors,
+                  key=lambda x: heuristic[x]
+               )
+               if heuristic[best_neighbor] &lt;= heuristic[current]:
+                  break
+               current = best_neighbor
+               path.append(current)
+            return path, heuristic[current]
+         start = 'A'
+         path, maximum_value = hill_climbing(start)
+         print("Starting State:", start)
+         print("Path:", " -&gt; ".join(path))
+         print("Maximum State:", path[-1])
+         print("Maximum Value:", maximum_value)
+Q2)        Write a program or report to compare Supervised Learning and      [20 marks]
+            Unsupervised Learning techniques.
+         from sklearn.tree import DecisionTreeClassifier
+         from sklearn.cluster import KMeans
+         import matplotlib.pyplot as plt
+         X=[
+           [180, 1],
+           [165, 1],
+           [95, 0],
+           [100, 0]
+         ]
+         y = [1, 0, 0, 1]
+         model = DecisionTreeClassifier(random_state=42)
+         model.fit(X, y)
+         new_patient = [[175, 1]]
+         prediction = model.predict(new_patient)
+         print("SUPERVISED LEARNING")
+         if prediction[0] == 1:
+            print("Prediction: Diabetes")
+         else:
+            print("Prediction: No Diabetes")
+         data = [
+           [180, 1],
+           [165, 1],
+           [95, 0],
+           [100, 0]
+         ]
+         kmeans = KMeans(n_clusters=2, random_state=42, n_init=10)
+         kmeans.fit(data)
+         print("\nUNSUPERVISED LEARNING")
+         print("Cluster Labels:", kmeans.labels_)
+         print("Cluster Centers:")
+         print(kmeans.cluster_centers_)
+         cluster_0 = []
+         cluster_1 = []
+         for i in range(len(data)):
+           if kmeans.labels_[i] == 0:
+              cluster_0.append(data[i])
+           else:
+              cluster_1.append(data[i])
+         plt.scatter(
+            [x[0] for x in cluster_0],
+            [x[1] for x in cluster_0],
+            label="Cluster 0"
+)
+         plt.scatter(
+            [x[0] for x in cluster_1],
+            [x[1] for x in cluster_1],
+            label="Cluster 1"
+         )
+         plt.scatter(
+            kmeans.cluster_centers_[:, 0],
+            kmeans.cluster_centers_[:, 1],
+            marker="X",
+            s=200,
+            label="Cluster Centers"
+         )
+         plt.xlabel("Blood Sugar")
+         plt.ylabel("Frequent Urination")
+         plt.title("Unsupervised Learning using K-Means")
+         plt.legend()
+         plt.grid(True)
+         plt.show()
+Q3)     Viva   [05 marks]</pre></section><section class="slip" data-slip="21"><div class="head"><div><span class="tag">SLIP 21</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_21
+Q1)        Write a program implement Iterative Deepening Search (IDS).   [10 marks]
+         def dls(graph, node, goal, depth, visited):
+           if node == goal:
+              return True
+           if depth == 0:
+              return False
+           visited.add(node)
+           for neighbour in graph[node]:
+              if neighbour not in visited:
+                 if dls(graph, neighbour, goal, depth - 1, visited):
+                    return True
+           return False
+         def ids(graph, start, goal, max_depth):
+           for depth in range(max_depth + 1):
+              visited = set()
+              if dls(graph, start, goal, depth, visited):
+                 print("Goal found at depth", depth)
+                 return True
+           print("Goal not found")
+           return False
+         graph = {
+           'A': ['B', 'C'],
+           'B': ['D', 'E'],
+           'C': ['F'],
+           'D': [],
+           'E': [],
+           'F': []
+         }
+         start = input("Enter start node: ")
+goal = input("Enter goal node: ")
+         max_depth = int(input("Enter maximum depth: "))
+         ids(graph, start, goal, max_depth)
+Q2)        Write a program to implement the Gaussian Naïve Bayes Classifier for   [20 marks]
+            classifying numerical data.
+         from sklearn.naive_bayes import GaussianNB
+         from sklearn.model_selection import train_test_split
+         from sklearn.metrics import accuracy_score
+         X=[
+           [25, 20000],
+           [30, 25000],
+           [35, 30000],
+           [40, 40000],
+           [45, 50000],
+           [50, 60000],
+           [28, 22000],
+           [38, 35000],
+           [48, 55000],
+           [55, 65000]
+         ]
+         y = [0, 0, 0, 1, 1, 1, 0, 1, 1, 1]
+         X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42
+         )
+         model = GaussianNB()
+         model.fit(X_train, y_train)
+         y_prediction = model.predict(X_test)
+         accuracy = accuracy_score(y_test, y_prediction)
+         print("Gaussian Naive Bayes Classifier")
+         print("--------------------------------")
+         print("Test Accuracy:", accuracy)
+         print("Accuracy Percentage:", accuracy * 100, "%")
+         test_data = [[42, 45000]]
+         prediction = model.predict(test_data)
+probability = model.predict_proba(test_data)
+         print("\nTest Data:")
+         print("Age:", test_data[0][0])
+         print("Income:", test_data[0][1])
+         print("\nPrediction:")
+         if prediction[0] == 1:
+            print("Loan Approved")
+         else:
+            print("Loan Rejected")
+         print("\nProbability of Loan Rejection:",
+             round(probability[0][0], 2))
+         print("Probability of Loan Approval:",
+             round(probability[0][1], 2))</pre></section><section class="slip" data-slip="22"><div class="head"><div><span class="tag">SLIP 22</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_22
+Q1)       Write a program to solve the Tower of Hanoi Problem using state-space   [10 marks]
+           representation.
+         def tower_of_hanoi(n, source, auxiliary, destination):
+           if n == 1:
+              print("Move disk 1 from", source, "to", destination)
+              return
+           tower_of_hanoi(n - 1, source, destination, auxiliary)
+           print("Move disk", n, "from", source, "to", destination)
+           tower_of_hanoi(n - 1, auxiliary, source, destination)
+         n = int(input("Enter number of disks: "))
+         print("\nInitial State:")
+         print("A =", list(range(n, 0, -1)))
+         print("B = []")
+         print("C = []")
+         print("\nMoves:")
+         tower_of_hanoi(n, 'A', 'B', 'C')
+         print("\nGoal State:")
+         print("A = []")
+         print("B = []")
+         print("C =", list(range(n, 0, -1)))
+Q2)       Write a program to solve the N-Queens Problem using the Backtracking   [20 marks]
+           Algorithm.
+         def is_safe(board, row, col, n):
+           for i in range(row):
+             if board[i][col] == 1:
+                 return False
+           i = row - 1
+           j = col - 1
+           while i &gt;= 0 and j &gt;= 0:
+             if board[i][j] == 1:
+                return False
+             i=i-1
+            j=j-1
+           i = row - 1
+           j = col + 1
+           while i &gt;= 0 and j &lt; n:
+             if board[i][j] == 1:
+                return False
+             i=i-1
+            j=j+1
+           return True
+         def solve_n_queens(board, n, row):
+           if row == n:
+              return True
+           for col in range(n):
+              if is_safe(board, row, col, n):
+                board[row][col] = 1
+                if solve_n_queens(board, n, row + 1):
+                   return True
+                board[row][col] = 0
+           return False
+         n=4
+         board = [[0] * n for _ in range(n)]
+         if solve_n_queens(board, n, 0):
+           print("N-Queens Solution:")
+           for i in range(n):
+             print(board[i])
+         else:
+            print("No solution exists.")</pre></section><section class="slip" data-slip="23"><div class="head"><div><span class="tag">SLIP 23</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_23
+Q1)       Write a program to demonstrate the Hill Climbing Algorithm for finding   [10 marks]
+           the maximum value of a simple objective function. (F(x) = -x^2 + 4x)
+         def f(x):
+           return -x * x + 4 * x
+         def hill_climbing(start):
+           current = start
+           path = [current]
+           while True:
+              left = current - 1
+              right = current + 1
+              if f(left) &gt; f(right):
+                 best_neighbor = left
+              else:
+                 best_neighbor = right
+              if f(best_neighbor) &lt;= f(current):
+                 break
+              current = best_neighbor
+              path.append(current)
+           return path, current, f(current)
+         start = int(input("Enter starting value of x: "))
+         path, maximum_x, maximum_value = hill_climbing(start)
+         print("\nPath:", " -&gt; ".join(map(str, path)))
+         print("Maximum x:", maximum_x)
+         print("Maximum value:", maximum_value)
+Q2)       Write a program to solve the Map Colouring Problem using the   [20 marks]
+           Constraint Satisfaction Problem (CSP) approach.
+         def is_safe(vertex, graph, color, c):
+           for i in range(5):
+             if graph[vertex][i] == 1 and color[i] == c:
+                 return False
+           if c in color:
+              return False
+           return True
+         def graph_coloring(graph, color, vertex):
+           if vertex == 5:
+              return True
+           for c in range(1, 6):
+              if is_safe(vertex, graph, color, c):
+                color[vertex] = c
+                if graph_coloring(graph, color, vertex + 1):
+                   return True
+                color[vertex] = 0
+           return False
+         graph = [
+[0, 1, 1, 0, 0],
+             [1, 0, 1, 1, 0],
+             [1, 1, 0, 0, 1],
+             [0, 1, 0, 0, 1],
+             [0, 0, 1, 1, 0]
+         ]
+         m=5
+         color = [0, 0, 0, 0, 0]
+         color_names = [
+           "",
+           "Red",
+           "Blue",
+           "Green",
+           "Yellow",
+           "Purple"
+         ]
+         if graph_coloring(graph, color, 0):
+             print("Map Coloring Solution:")
+             for i in range(5):
+               print(chr(65 + i), "-&gt;", color_names[color[i]])
+         else:
+            print("No solution exists with", m, "colors.")</pre></section><section class="slip" data-slip="25"><div class="head"><div><span class="tag">SLIP 25</span><p class="hint">Shorter Q1 and Q2 codes • outputs removed</p></div><button onclick="copySlip(this)">Copy Code</button></div><pre>Slip_25
+Q1)        Write the program to implement the AO* Algorithm   [10 marks]
+         graph = {
+           'A': [('B', 'C')],
+           'B': [('D', 'E')],
+           'C': [('F', 'G')],
+           'D': [('H', 'I')],
+           'E': [('J',)],
+           'F': [],
+           'G': [],
+           'H': [],
+           'I': [],
+           'J': []
+         }
+         node_type = {
+           'A': 'OR',
+           'B': 'AND',
+           'C': 'OR',
+           'D': 'OR',
+           'E': 'OR',
+           'F': 'OR',
+           'G': 'OR',
+           'H': 'OR',
+           'I': 'OR',
+           'J': 'OR'
+         }
+         distance = {
+            ('A', 'B'): 2,
+            ('A', 'C'): 3,
+            ('B', 'D'): 1,
+            ('B', 'E'): 4,
+            ('D', 'H'): 2,
+            ('D', 'I'): 3,
+            ('E', 'J'): 1,
+            ('C', 'F'): 2,
+            ('C', 'G'): 5
+         }
+         def ao_star(node):
+           if len(graph[node]) == 0:
+               return 0
+           print("\nChecking Node:", node)
+           children = graph[node][0]
+           if node_type[node] == 'AND':
+              cost = 0
+              for child in children:
+                child_cost = ao_star(child)
+                cost = cost + distance[(node, child)] + child_cost
+              print("AND Node - Solve all children:", children)
+              print("Cost(", node, ") =", cost)
+              return cost
+           else:
+              costs = {}
+              for child in children:
+                child_cost = ao_star(child)
+                cost = distance[(node, child)] + child_cost
+                costs[child] = cost
+              best_child = min(costs, key=costs.get)
+              best_cost = costs[best_child]
+              print("OR Node - Choose minimum cost child")
+              print("Costs:", costs)
+              print("Choose:", best_child)
+              print("Cost(", node, ") =", best_cost)
+              return best_cost
+         start_node = 'A'
+         print("AO* (AND-OR STAR) ALGORITHM")
+         print("----------------------------")
+         cost = ao_star(start_node)
+         print("\nOptimal Solution:")
+         print("A -&gt; C -&gt; F")
+         print("Total Minimum Cost =", cost)
+         OR Node - Choose minimum cost child
+         Costs: {'H': 2, 'I': 3}
+         Choose: H
+Cost( D ) = 2
+         Checking Node: E
+         OR Node - Choose minimum cost child
+         Costs: {'J': 1}
+         Choose: J
+         Cost( E ) = 1
+         AND Node - Solve all children: ('D', 'E')
+         Cost( B ) = 8
+         Checking Node: C
+         OR Node - Choose minimum cost child
+         Costs: {'F': 2, 'G': 5}
+         Choose: F
+         Cost( C ) = 2
+         OR Node - Choose minimum cost child
+         Costs: {'B': 10, 'C': 5}
+         Choose: C
+         Cost( A ) = 5
+         Optimal Solution:
+         A -&gt; C -&gt; F
+         Total Minimum Cost = 5
+Q2)       Write a program to implement the Minimax Algorithm for a two-player   [20 marks]
+           game.
+         import math
+         def minimax(depth, node_index, is_max, values, max_depth):
+           if depth == max_depth:
+              return values[node_index]
+           if is_max:
+              left = minimax(
+                 depth + 1,
+                 node_index * 2,
+                 False,
+                 values,
+                 max_depth
+              )
+              right = minimax(
+                 depth + 1,
+                 node_index * 2 + 1,
+                 False,
+                 values,
+max_depth
+              )
+              return max(left, right)
+           else:
+              left = minimax(
+                 depth + 1,
+                 node_index * 2,
+                 True,
+                 values,
+                 max_depth
+              )
+              right = minimax(
+                 depth + 1,
+                 node_index * 2 + 1,
+                 True,
+                 values,
+                 max_depth
+              )
+              return min(left, right)
+         leaf_values = [3, 5, 2, 9]
+         tree_depth = int(math.log2(len(leaf_values)))
+         best_score = minimax(
+           depth=0,
+           node_index=0,
+           is_max=True,
+           values=leaf_values,
+           max_depth=tree_depth
+         )
+         print("Leaf Node Values:", leaf_values)
+         print("Optimal value selected by Minimax:", best_score)</pre></section></div></main>
 <script>
-async function copyCode(id, button) {
-  const code = document.getElementById(id).innerText;
-  const oldText = button.innerText;
-  try {
-    await navigator.clipboard.writeText(code);
-  } catch (e) {
-    const area = document.createElement('textarea');
-    area.value = code;
-    document.body.appendChild(area);
-    area.select();
-    document.execCommand('copy');
-    area.remove();
-  }
-  button.innerText = 'Copied!';
-  setTimeout(() => button.innerText = oldText, 1300);
-}
-</script>
-</body>
-</html>
+function filterSlips(){const q=document.getElementById('search').value.toLowerCase();let shown=0;document.querySelectorAll('.slip').forEach(s=>{const ok=s.innerText.toLowerCase().includes(q);s.classList.toggle('hidden',!ok);if(ok)shown++});document.getElementById('count').textContent=shown+' slip(s)'}
+async function copySlip(btn){const text=btn.closest('.slip').querySelector('pre').innerText;try{await navigator.clipboard.writeText(text);btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy Slip',1200)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy Slip',1200)}}
+filterSlips();
+</script></body></html>
